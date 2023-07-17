@@ -52,3 +52,73 @@ colores.push('naranja')
 
 console.log(objeto)
 console.log(colores)
+
+/* JS 5: Strings - Cadenas de texto */
+
+/* let nombre = 'Sergio'; */
+let nombre = "Sergio";
+let apellido = "Flores";
+let lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae. Facere natus impedit, placeat sunt voluptatibus porro aperiam nulla a eius vel, laboriosam repellendus harum deleniti perferendis reprehenderit exercitationem sequi."
+
+let saludo = new String("Hello world");
+
+console.log(nombre)
+console.log(apellido)
+console.log(saludo)
+
+/* => Invocación de propiedades de tipo string */
+console.log(nombre.length)
+console.log(apellido.length)
+console.log(saludo.length)
+
+/* => Invocación de métodos de tipo string */
+console.log(nombre.toUpperCase());
+console.log(apellido.toLowerCase());
+console.log(lorem.includes("amet"));
+console.log(lorem.includes("sergio"));
+console.log(lorem.trim()) // Quitar espacios en blanco
+console.log(lorem.split(" "))
+console.log(lorem.split(","))
+
+/* JS 6: String templates |  Plantillas de las cadenas de texto */
+
+let concatenation = "Hola mi nombre es " + nombre + " " + apellido + ".";
+let interpolation = `Hola mi nombre es ${nombre} ${apellido}.`;
+
+console.log(concatenation);
+console.log(interpolation);
+
+let seasons =`
+    <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Inviern</li>
+    </ul>
+`;
+
+console.log(seasons)
+
+/* JS 7: Números */
+
+let a = 2;
+let b = new Number(1);
+let c = 7.19;
+let d = "5.6";
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+/* Métodos con números */
+
+console.log(c.toFixed(1));
+console.log(c.toFixed(5));
+console.log(parseInt(c));
+console.log(parseFloat(c));
+console.log(typeof(c));
+console.log(typeof(d));
+console.log(a + b);
+console.log(c + d);
+console.log(c + parseInt(d));
+console.log(c + parseFloat(d));
