@@ -122,3 +122,25 @@ console.log(a + b);
 console.log(c + d);
 console.log(c + parseInt(d));
 console.log(c + parseFloat(d));
+
+/*JS 8: Booleans */
+
+let verdadero = true;
+let falso = false;
+
+console.log(verdadero);
+console.log(falso);
+
+/*Valores truthy y falsy */
+
+/*JS 9: Undefined-NaN-Null */
+
+let indefinida;
+
+console.log(indefinida);
+
+let nulo = null;
+console.log(nulo);
+
+let noEsUnNumero = "hola" * 3.7;
+console.log(noEsUnNumero)
