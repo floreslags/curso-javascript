@@ -280,3 +280,151 @@
 // console.log(Object.values(alumno))
 // console.log(alumno.hasOwnProperty("nombre"))
 
+
+/* 
+// ***** JS 12: TIPOS DE OPERADORES *****
+
+// --- Aritméticos: Suma, resta, producto, cociente, residuo, agrupación
+
+// let aritmeticos = 5 + (5-10) *3;
+// console.log(aritmeticos)
+
+// let modulo = 5%2;
+// console.log(modulo)
+ 
+// --- Relacionales 
+
+// console.log(8 > 9)
+// console.log(9 > 8)
+// console.log(8 >= 9)
+// console.log(9 >= 8)
+// console.log(7 < 7)
+// console.log(7 <= 7)
+
+// console.log(7 == 7)
+// console.log('7' == 7)
+// console.log(0 == false)
+
+// console.log(7 === 7)
+// console.log('7' === 7)
+// console.log(0 === false)
+
+// --- Incremento y decremento
+
+// let incremento = 1;
+
+// incremento+=2;
+// console.log(incremento)
+
+// incremento+=4;
+// console.log(incremento)
+
+// incremento *=3;
+// console.log(incremento)
+
+// console.log(incremento ++);
+// console.log(incremento --)
+
+// --- Lógicos
+
+// console.log(true);
+// console.log(!true);
+// console.log(!true);
+
+// console.log((9 === 9)|| ('9' === 9));
+// console.log((9 === 9)&& ('9' === 9));
+// console.log((9 === 9)&& ('9' === '9')); 
+*/
+
+// JS 14: Condicionales
+
+// --- if --- else
+
+//let edad = 17;
+//edad = 29;
+
+// if(edad > 17){
+//     console.log("Eres mayor de edad");
+// }else{
+//     console.log("Eres menor de edad");
+// }
+
+// if(edad < 18){
+//     console.log("Eres menor de edad");
+// }else{
+//     console.log("Eres mayor de edad");
+// }
+
+// if(edad >= 18){
+//     console.log("Eres mayor de edad");
+// }else{
+//     console.log("Eres menor de edad");
+// }
+
+// if(edad <= 17){
+//     console.log("Eres menor de edad");
+// }else{
+//     console.log("Eres mayor de edad");
+// }
+
+//let time = 4;
+
+// if(time >= 0 && time <= 5){
+//     console.log("Let me sleep :(");
+// }else if(time >= 6 && time <= 11){
+//     console.log("¡Buenos días!")
+// }else if(time >= 12 && time <= 18){
+//     console.log("¡Buenas tardes!");
+// }else{
+//     console.log("¡Buenas noches!");
+// }
+
+// if(time < 6){
+//     console.log("Let me sleep :(");
+// }else if(time > 5 && time < 12){
+//     console.log("¡Buenos días!")
+// }else if(time > 11 && time < 19){
+//     console.log("¡Buenas tardes!");
+// }else{
+//     console.log("¡Buenas noches!");
+// }
+
+// --- Operador ternario: (condición)?verdadero:falso
+
+// let edad = 17;
+// edad = 29;
+
+// let eresMayor = (edad >=18)?"Eres mayor de edad":"Eres menor de edad";
+// console.log(eresMayor);
+
+// --- Switch Case
+
+// let dia = 1;
+
+// switch (dia) {
+//     case 0:
+//         console.log('Domingo')
+//         break;
+//     case 1:
+//         console.log('Lunes')
+//         break;
+//     case 2:
+//         console.log('Martes')
+//         break;
+//     case 3:
+//         console.log('Miércoles')
+//         break;
+//     case 4:
+//         console.log('Jueves')
+//         break;
+//     case 5:
+//         console.log('Viernes')
+//         break;
+//     case 6:
+//         console.log('Sábado')
+//         break;
+
+//     default:
+//         console.log('El día no existe')
+//         break;
+// }
