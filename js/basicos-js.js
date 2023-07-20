@@ -194,3 +194,45 @@ const funcionExpresada = function (){
 funcionExpresada();
 
 /*JS 11: Arreglos | Arrays */
+
+// Arreglo vacío
+const empty = [];
+
+//Arreglo con distintos valores
+
+const data = [1,true,"hola",["A","B","C"]];
+
+console.log(empty)
+console.log(data)
+
+// Accediendo a los elementos de un arreglo
+console.log(data.length)
+console.log(data[2])
+console.log(data[3][2])
+
+// Médodo Array.of()
+
+const dataDos = Array.of("X","Y","Z",9,8,7);
+console.log(dataDos)
+
+// Método Array().fill() Llenar un arreglo con un determinado valor
+
+const data3 = Array(100).fill(false);
+console.log(data3);
+
+// Método push() - Agrega elementos
+
+const colors = ["red","green","blue"];
+console.log(colors);
+colors.push("black");
+console.log(colors);
+
+// Método pop() - Elimina el último elemento
+
+colors.pop()
+console.log(colors);
+
+// Método Array.forEach()
+colors.forEach(function(item,index){
+    console.log(`<li id="${index}">${item}</li>`);
+})
