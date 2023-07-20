@@ -144,3 +144,53 @@ console.log(nulo);
 
 let noEsUnNumero = "hola" * 3.7;
 console.log(noEsUnNumero)
+
+/*JS 10: Funciones */
+
+// Función simple
+
+function funcionSimple(){
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+}
+
+funcionSimple();
+
+//Retorno de valores
+
+function retornarValor(){
+    return "La función devuelve una cadena de texto";
+}
+
+console.log(retornarValor());
+
+// Función con parámetros
+
+function saludar(name,age){
+    console.log(`Hola, mi nombre es ${name} y tengo ${age}.`)
+}
+
+saludar('Sergio', 29);
+
+// Funciones declaradas
+
+funcionDeclarada();
+
+function funcionDeclarada(){
+    console.log("Esto es una función declarada");
+}
+
+funcionDeclarada();
+
+// Funciones anónimas o expresadas
+
+ // funcionExpresada(); Este tipo de función no se puede invocar antes de ser declarada.
+
+const funcionExpresada = function (){
+    console.log("Esto es una función expresada")
+}
+
+funcionExpresada();
+
+/*JS 11: Arreglos | Arrays */
