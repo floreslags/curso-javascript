@@ -614,3 +614,58 @@
 // const arr3 = [...arr1,...arr2];
 // console.log(arr3)
 
+
+// ----- JS 21: Arrow Functions -----
+
+// const saludo = function(){
+//     console.log('Hola');
+// }
+
+// const saludo = ()=>{
+//     console.log('Hola');
+// }
+
+//const saludo = ()=>console.log('Hola');
+
+// const saludo = nombre =>console.log(`Hola ${nombre}`);
+
+// saludo('Sergio');
+
+// const sumar = function(a,b){
+//     return a+b;
+// }
+
+// const sumar = (a,b) => a+b;
+
+// console.log(sumar(9,9));
+
+// const funcionRobusta = ()=>{
+//     console.log('Uno');
+//     console.log('Dos');
+//     console.log('Tres');
+// }
+
+// funcionRobusta();
+
+
+// Iteaciones con Arrow Functions
+// const numbers = [1,2,3,4,5];
+
+// numbers.forEach((el,index) => console.log(`${el} está en la posición ${index}`));
+
+// Contexto "this"
+
+// function perro(){
+//     console.log(this)
+// }
+
+// perro()
+
+// const perro = {
+//     nombre:'Billy',
+//     ladrar:function(){
+//         console.log(this)
+//     }
+// }
+
+// perro.ladrar()
