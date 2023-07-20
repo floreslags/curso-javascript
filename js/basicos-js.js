@@ -556,3 +556,31 @@
 
 // let {name,lastName,age} = person;
 // console.log(name,age,lastName);
+
+// ----- JS 19: Objetos Literales -----
+
+// let nombre = "Will",
+// edad = 3;
+
+// const perro = {
+//     nombre:nombre,
+//     edad:edad,
+//     ladrar:function(){
+//         console.log('Guauu guauu!');
+//     }
+// }
+
+// console.log(perro);
+// perro.ladrar()
+
+// const dog = {
+//     nombre,
+//     edad,
+//     raza:'Callejero',
+//     ladrar(){
+//         console.log('Guau Guau Guauu')
+//     }
+// }
+
+// console.log(dog)
+// dog.ladrar()
