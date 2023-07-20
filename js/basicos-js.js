@@ -511,3 +511,24 @@
 // } catch (error) {
 //     console.log(`Se produjo el siguiente error: ${error}`)
 // }
+
+// ----- JS 17: Break & Continue
+
+// let numbers = [10,20,30,40,50,60,70,80,90];
+
+// for (let i = 0; i<numbers.length; i++) {
+//     if(i === 5){
+//         break;
+//     }
+    
+//     console.log(numbers[i])
+// }
+
+// for (let i = 0; i<numbers.length; i++) {
+//     if(i === 5){
+//         continue;
+//     }
+    
+//     console.log(numbers[i])
+// }
+
