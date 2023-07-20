@@ -669,3 +669,82 @@
 // }
 
 // perro.ladrar()
+
+// ----- JS 22: POO - Prototipos -----
+
+/* const animal={
+    nombre:'Snoopy',
+    sonar(){
+        console.log('Estoy vivo...');
+    }
+}
+
+console.log(animal); */
+
+/* const animal2={
+    nombre:'Lola Bunny',
+    sonar(){
+        console.log('Estoy vivo...');
+    }
+}
+
+console.log(animal2); */
+
+// --- Función constructora con atributos y metodos
+
+// function Animal(name,gender){
+//     //Atributos
+//     this.name = name;
+//     this.gender = gender;
+    
+//     //Métodos
+//     this.sound = function (){
+//         console.log('Estoy vivo');
+//     }
+    
+//     this.saludar = function(){
+//         console.log(`Hola me llamo ${this.name}`)
+//     }
+// }
+
+// const snoopy = new Animal('Snoopy','Male'),
+// lolaBunny = new Animal('Lola Bunny','Female');
+
+// console.log(snoopy);
+// console.log(lolaBunny);
+
+// snoopy.sound();
+// snoopy.saludar();
+
+// lolaBunny.sound();
+// lolaBunny.saludar();
+
+// --- Función constructora con atributos
+// function Animal(name,gender){
+//     //Atributos
+//     this.name = name;
+//     this.gender = gender;
+
+// }
+
+// Agregación de los métodos a una función constructora
+
+// Animal.prototype.sound = function (){
+//     console.log('Estoy vivo');
+// }
+
+// Animal.prototype.saludar = function(){
+//     console.log(`Hola me llamo ${this.name}`)
+// }
+
+// const snoopy = new Animal('Snoopy','Male'),
+// lolaBunny = new Animal('Lola Bunny','Female');
+
+// console.log(snoopy)
+// console.log(lolaBunny)
+
+// snoopy.sound();
+// snoopy.saludar();
+
+// lolaBunny.sound();
+// lolaBunny.saludar();
