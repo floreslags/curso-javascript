@@ -532,3 +532,27 @@
 //     console.log(numbers[i])
 // }
 
+// ----- JS 18: Destructuración
+
+// const numbers = [1,2,3];
+
+// Arreglo: Sin destructuración
+// let uno = numbers[0],
+// dos = numbers[1],
+// tres = numbers[2];
+
+
+// Arreglo: Con destructuración
+// const [one,two,three] = numbers;
+
+// console.log(uno,dos,tres);
+// console.log(one, two, three);
+
+// const person = {
+//     name:'Sergio',
+//     lastName:'Flores',
+//     age:29
+// }
+
+// let {name,lastName,age} = person;
+// console.log(name,age,lastName);
