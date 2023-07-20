@@ -428,3 +428,62 @@
 //         console.log('El día no existe')
 //         break;
 // }
+
+/* 
+
+// ----- JS 15: Loops / Ciclos -----
+
+// --- Ciclo While
+
+// let contador = 0;
+
+// while(contador < 10){
+//     console.log("While "+contador);
+//     contador++;
+// }
+
+// --- Ciclo Do-While
+
+// do{
+//     console.log("Do While " + contador);
+//     contador++;
+// }while(contador<10)
+
+// --- Ciclo for
+
+// for (let i = 0; i < 10; i++) {
+//     console.log("For " + i);
+// }
+
+// let numbers = [10,20,30,40,50,60,70,80,90];
+
+// for (let n = 0; n<numbers.length;n++) { // Lectura de arreglos
+//     console.log(numbers[n]);
+// }
+
+// --- For-in
+
+// const sergio = {
+//     name:'Sergio',
+//     lastName:'Flores',
+//     age:29
+// }
+
+// for (const propiedad in sergio) {
+//     console.log(`key: ${propiedad} - Value: ${sergio[propiedad]}`);
+// }
+
+// --- For-Of
+
+// let numbers = [10,20,30,40,50,60,70,80,90];
+
+// for (const element of numbers) {
+//     console.log(element);
+// }
+
+// let cadena = "Hola Mundo";
+
+// for (const caracter of cadena) {
+//     console.log(caracter);
+// }
+ */
