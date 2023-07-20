@@ -487,3 +487,27 @@
 //     console.log(caracter);
 // }
  */
+
+// ----- JS 16: Manejo de errores / Error handling -----
+
+// try {
+//     noExiste;
+// } catch (error) {
+//     console.log(error)
+// } finally {
+//     console.log("Bloque finally")
+// }
+
+// --- Mensajes personalizados dentro de una estructura try-catch
+
+// try {
+//     let number = 'u';
+//     if(isNaN(number)){
+//         throw new Error('El caracter introducido no es un número')
+//     }
+
+//     console.log(number * number);
+
+// } catch (error) {
+//     console.log(`Se produjo el siguiente error: ${error}`)
+// }
