@@ -853,3 +853,61 @@ scooby.bark(); // Método exclusivo de la clase "Perro"
 scooby.sayHello(); // Método de la clase heredada de la clase padre "Animal"
 
  */
+
+/* 
+// ----- JS 25: Getters & Setters -----
+
+// Creación de una clase
+class Animal{
+    constructor(name,gender){
+        this.name = name;
+        this.gender = gender;
+    }
+
+    sound(){
+        console.log("I'm alive!");
+    }
+
+    sayHello(){
+        console.log(`Hello, I'm ${this.name}`);
+    }
+
+}
+
+// Herencia de una clase
+class Dog extends Animal{
+
+    constructor(name,gender,size){
+        super(name,gender);
+        this.size = size;
+        this.breed = null;
+    }
+
+    sound(){
+        console.log("I'm a dog, I bark");
+    }
+
+    bark(){
+        console.log('Wuuf! Wuuf!')
+    }
+
+    static describe(){
+        console.log("Dogs are mammalian animals that belong to the canine family. We are considered man's best friends.");
+    }
+
+    get getBreed(){
+        return this.breed;
+    }
+
+    set setBreed(breed){
+        this.breed = breed;
+    }
+
+}
+
+const scooby =  new Animal('Scooby','Male');
+console.log(scooby);
+
+// No funcionó el llamado y declaración del atributo "breed" :(
+
+ */
