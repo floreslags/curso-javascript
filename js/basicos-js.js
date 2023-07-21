@@ -749,6 +749,7 @@ console.log(animal2); */
 // lolaBunny.sound();
 // lolaBunny.saludar();
 
+/* 
 // ----- JS 23: Prototype Heritage | Herencia Prototipica -----
 
 function Animal(name,gender){
@@ -792,4 +793,63 @@ const snoopy = new Dog("Snoopy","Male","Medium");
 console.log(snoopy);
 
 snoopy.bark();
-snoopy.sound();
+snoopy.sound(); 
+*/
+
+/* 
+// ----- JS 24: Classes & Heritage -----
+
+// Creación de una clase
+class Animal{
+    constructor(name,gender){
+        this.name = name;
+        this.gender = gender;
+    }
+
+    sound(){
+        console.log("I'm alive!");
+    }
+
+    sayHello(){
+        console.log(`Hello, I'm ${this.name}`);
+    }
+}
+
+// Herencia de una clase
+class Dog extends Animal{
+
+    constructor(name,gender,size){
+        super(name,gender);
+        this.size = size;
+    }
+
+    sound(){
+        console.log("I'm a dog, I bark");
+    }
+
+    bark(){
+        console.log('Wuuf! Wuuf!')
+    }
+}
+
+
+//const mimi = new Animal('Mimi','Female');
+//const scooby =  new Animal('Scooby','Male');
+
+// console.log(mimi);
+// console.log(scooby);
+
+// mimi.sayHello();
+// mimi.sound();
+
+// scooby.sayHello();
+// scooby.sound();
+
+const scooby = new Dog('Scooby','Male','Giant');
+console.log(scooby);
+
+scooby.sound(); // Método sobreescrito en la clase "Perro"
+scooby.bark(); // Método exclusivo de la clase "Perro"
+scooby.sayHello(); // Método de la clase heredada de la clase padre "Animal"
+
+ */
