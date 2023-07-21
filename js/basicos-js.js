@@ -748,3 +748,48 @@ console.log(animal2); */
 
 // lolaBunny.sound();
 // lolaBunny.saludar();
+
+// ----- JS 23: Prototype Heritage | Herencia Prototipica -----
+
+function Animal(name,gender){
+    //Atributos
+    this.name = name;
+    this.gender = gender;
+}
+
+// Agregación de los métodos a una función constructora
+
+Animal.prototype.sound = function (){
+    console.log('Estoy vivo');
+}
+
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.name}`)
+}
+
+// Herencia prototípica
+function Dog(name,gender,size){
+    this.super = Animal;
+    this.super(name,gender);
+    this.size = size;
+}
+// Creación de la instancia con la herenciade de atributos de la función padre
+Dog.prototype = new Animal();
+Dog.prototype.constructor = Dog;
+
+// Sobre escritura de los métodos de la función padre en el hijo
+Dog.prototype.sound = function(){
+    console.log("I am barking, I'm a Dog");
+}
+
+Dog.prototype.bark = function(){
+    console.log("Guau Guau Guau!");
+}
+
+// Invocación de instancias del prototipo
+
+const snoopy = new Dog("Snoopy","Male","Medium");
+console.log(snoopy);
+
+snoopy.bark();
+snoopy.sound();
