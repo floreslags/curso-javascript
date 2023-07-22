@@ -1142,3 +1142,17 @@ console.log(0 && "Right value"); */
 // console.log(aviso); 
 */
 
+/* // ----- JS 31: Regular Expressions -----
+
+let cadena="Lorem 85ipsum dolor sit amet consectetur adipisicing elit. Dolores repudiandae quasi molestiae mollitia beatae natus earum, magnam iure doloremque a. Rem repudiandae quod est ullam neque numquam nemo, et animi?";
+
+let expReg = new RegExp("lorem","ig");
+
+//let expReg2 = /\d/ig;
+let expReg2 = /lorem{1,}/ig;
+
+// console.log(expReg.test(cadena));
+// console.log(expReg.exec(cadena));
+
+console.log(expReg2.test());
+console.log(expReg2.exec()); */
