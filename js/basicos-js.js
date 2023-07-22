@@ -1078,3 +1078,46 @@ console.log(Math.random()); // Valores entre 0 y 1
 console.log(Math.random() * 1000); // Valores personalizados
 console.log(Math.round(Math.random()*1000)); // Valores personalizados
  */
+
+
+/* // ----- JS 29: OR/AND SHOR CIRCUIT -----
+
+// --> OR
+
+function sayHello(name){
+    name = name || 'Unknown';
+    console.log(`Hello ${name}`);
+}
+
+sayHello();
+sayHello('Sergio');
+
+
+// En estos casos se aplican los valores que tienen a VERDADERO posicionados a la IZQUIERDA.
+console.log("String" || "Right value");
+console.log(19 || "Right value");
+console.log(true || "Right value");
+console.log([] || "Right value");
+console.log({} || "Right value");
+
+// En estos casos se aplican los valores que tienen a VERDADERO posicionados a la DERECHA.
+console.log(false || "Right value");
+console.log(null || "Right value");
+console.log(undefined || "Right value");
+console.log(0 || "Right value");
+
+// --> AND
+
+// En estos casos se aplican los valores que tienen a FALSO posicionados a la IZQUIERDA.
+console.log("String" && "Right value");
+console.log(19 && "Right value");
+console.log(true && "Right value");
+console.log([] && "Right value");
+console.log({} && "Right value");
+
+// En estos casos se aplican los valores que tienen a FALSO posicionados a la DERECHA.
+console.log(false && "Right value");
+console.log(null && "Right value");
+console.log(undefined && "Right value");
+console.log(0 && "Right value"); */
+
