@@ -911,3 +911,96 @@ console.log(scooby);
 // No funcionó el llamado y declaración del atributo "breed" :(
 
  */
+
+/* 
+// ----- JS 26: Console Object -----
+
+console.error('This is an error');
+console.warn('This is a warning');
+console.info('This is an info msg');
+console.log("This is record or log msg");
+
+let nombre = "Sergio",
+apellido = "Flores",
+edad = 29;
+
+// Métodos de impresión e interpolación
+console.log(nombre,apellido,edad);
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+
+console.log(`Hola mi nombre es %s %s y tengo %d años.`,nombre,apellido,edad); // %s = string; %d = digit
+
+console.clear();
+
+console.log(window);
+console.log(document);
+console.dir(window)
+console.dir(document)
+console.clear();
+
+// Listas en consola
+console.group('Cursos de @jonmircha en YT');
+console.log("HTML");
+console.log("CSS");
+console.log("JS");
+console.log("node JS");
+console.groupEnd();
+
+console.groupCollapsed('Cursos de @jonmircha en YT');
+console.log("HTML");
+console.log("CSS");
+console.log("JS");
+console.log("node JS");
+console.groupEnd();
+
+console.clear();
+
+// Tablas en consola
+console.table(Object.entries(console).sort());
+
+// Tablas con arreglos
+const numbers = [1,2,3,4,5];
+const vowels = ["a","e","i","o","u"];
+
+console.table(numbers)
+console.table(vowels)
+
+const dog = {
+    name:'Bonnie',
+    breed:'Boxer',
+    color:'brown'
+}
+
+console.table(dog)
+
+console.clear();
+
+// Tiempo
+
+console.time('Array eval');
+
+// const arreglo = Array(1000000);
+
+// for (let index = 0; index < arreglo.length; index++) {
+//     arreglo[index] = index;    
+// }
+
+console.timeEnd('Array eval');
+
+console.clear();
+
+// .count() Mostrar cantidad de ejecuciones de un determinado bloque de código
+
+// for (let index = 0; index < 100; index++) {
+//     console.count('For Loop')
+//     console.log(index);
+// }
+
+// Librerías de pruebas unitarias en JS 
+
+let x = 3, 
+y = 2,
+testXY = "Se espera que X siempre sea MENOR QUE Y";
+
+console.assert(x<y, {x,y,testXY});
+ */
