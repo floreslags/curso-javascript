@@ -1004,3 +1004,42 @@ testXY = "Se espera que X siempre sea MENOR QUE Y";
 
 console.assert(x<y, {x,y,testXY});
  */
+
+/* 
+// ----- JS 27: Date {} -----
+
+console.log(Date());
+
+let fecha = new Date();
+
+// Gestión de fechas
+console.log(fecha);
+console.log(fecha.getDate()); // Día del mes
+console.log(fecha.getDay()); // Día de la semana
+console.log(fecha.getMonth()); // Mes
+console.log(fecha.getYear()); // NO ES UTIL 2023 - 1920
+console.log(fecha.getFullYear()); // Año
+
+// Gestión de tiempo
+console.log(fecha.getHours());
+console.log(fecha.getMinutes());
+console.log(fecha.getSeconds());
+console.log(fecha.getMilliseconds());
+
+// Conversiones de fecha y tiempo en cadenas de texto
+console.log(fecha.toString());
+console.log(fecha.toDateString());
+console.log(fecha.toLocaleString());
+console.log(fecha.toLocaleDateString());
+console.log(fecha.toLocaleTimeString());
+
+// Gestión de fecha y tiempo en distintas zonas horarias
+console.log(fecha.getTimezoneOffset());
+console.log(fecha.getUTCDate());
+console.log(fecha.getUTCHours());
+
+// TimeStamp 01-01-1970 
+console.log(Date.now()); // Expresado en Segs.
+
+let myBirthday = new Date(1993,9,27);
+console.log(myBirthday); */
