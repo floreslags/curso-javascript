@@ -1156,3 +1156,21 @@ let expReg2 = /lorem{1,}/ig;
 
 console.log(expReg2.test());
 console.log(expReg2.exec()); */
+
+/* // ----- JS 32: Immediately Invoked Function Expression -----
+
+(
+    function(){
+        console.log("First IIFE")
+    }
+)();
+
+(
+    function(d,w,c){
+        console.log("Second IIFE");
+        console.log(d);
+        console.log(w);
+        c.log('Log desde alias');
+    }
+)(document,window,console); */
+
