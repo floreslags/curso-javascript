@@ -1006,7 +1006,7 @@ console.assert(x<y, {x,y,testXY});
  */
 
 /* 
-// ----- JS 27: Date {} -----
+// ----- JS 27: Date Object -----
 
 console.log(Date());
 
@@ -1042,4 +1042,39 @@ console.log(fecha.getUTCHours());
 console.log(Date.now()); // Expresado en Segs.
 
 let myBirthday = new Date(1993,9,27);
-console.log(myBirthday); */
+console.log(myBirthday); 
+
+*/
+
+
+/* // ----- JS 28: Math Object -----
+
+console.log(Math);
+console.log(Math.PI);
+
+// Obtener el valor absoluto
+console.log(Math.abs(-7,8)); 
+
+// Redondeo de valores
+console.log(Math.ceil(7.8));
+console.log(Math.floor(7.8));
+console.log(Math.round(7.8));
+console.log(Math.round(7.2));
+
+// Manejo de raices
+console.log(Math.sqrt(8));
+
+// Manejo de potencias
+//console.log(Math.pow(base,exponente));
+console.log(Math.pow(2,5));
+
+// Identificar valores positivos o negativos
+console.log(Math.sign(5));
+console.log(Math.sign(-5));
+console.log(Math.sign(0));
+
+// Valores aleatorios
+console.log(Math.random()); // Valores entre 0 y 1
+console.log(Math.random() * 1000); // Valores personalizados
+console.log(Math.round(Math.random()*1000)); // Valores personalizados
+ */
