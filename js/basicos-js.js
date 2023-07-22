@@ -1121,3 +1121,24 @@ console.log(null && "Right value");
 console.log(undefined && "Right value");
 console.log(0 && "Right value"); */
 
+/* 
+// ----- JS 30: ALERT - CONFIRM - PROMP -----
+
+//window.alert('This is an alert');
+//window.confirm('This is a confirm msg');
+//window.prompt('Ingrese un valor');
+
+// Tratamiento de alertas
+//let alerta = alert('Alert!');
+//console.log(alerta);
+
+// Tratamiento de confirmaciones
+//let confirmacion = confirm('Confirmar?');
+//console.log(confirmacion);
+
+
+// Tratamiento de avisos
+// let aviso = prompt('Ingrese un valor');
+// console.log(aviso); 
+*/
+
