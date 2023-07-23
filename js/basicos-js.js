@@ -1174,3 +1174,4 @@ console.log(expReg2.exec()); */
     }
 )(document,window,console); */
 
+// ----- JS 33: Modules (import-export)

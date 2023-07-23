@@ -1,0 +1,1 @@
+console.log('No ES6+ module files supported');
