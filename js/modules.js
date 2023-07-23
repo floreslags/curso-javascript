@@ -19,7 +19,7 @@ saludo;
 
 import {logicObject as logic} from './exercises-one.js';
 
-logic.stringCount('hello');
-logic.stringSlice('js',2);
-logic.stringSplit('Hi, my name is...'," ");
-logic.stringRepeat('name ',4);
+//logic.stringCount('hello');
+//logic.stringSlice("Sergio Flores",4);
+//logic.stringSplit('Hi, my name is'," ");
+//logic.stringRepeat("Sergio Flores",4);
