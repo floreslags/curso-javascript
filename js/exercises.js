@@ -1,4 +1,4 @@
-// ----- JS 34: Ejercicios 1 -----
+// ----- JS 34: Ejercicios 1,2 3, 4 -----
 
 // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 
@@ -18,7 +18,7 @@
 //     }
 // }
 
-const stringCount = (text = "")=> 
+const stringCount = (text = "") => 
     (!text)
         ?console.warn("No has ingresado un texto")
         :console.info(`La cadena "${text}" tiene ${text.length} caracteres.`);
@@ -50,7 +50,7 @@ const stringSlice = (text= "", long=undefined) =>
 //     }
 // }
 
-const stringSplit = (text="",separator=undefined)=>
+const stringSplit = (text="",separator=undefined) =>
     (!text)
         ?console.warn("No ingresaste una cadena de texto")
         :(separator === undefined)
@@ -78,11 +78,49 @@ const stringRepeat = (text="",times=undefined) => {
 }
 
 
+// ----- JS 35: Ejercicios 5,6,7,8
+
+// 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+const invertedString = (text="")=>
+    (!text)
+        ?console.warn("No ingresaste un texto")
+        :console.info(text.split("").reverse().join(""));
+// 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+const stringCounter = (text="",word="")=>
+    (!text)
+        ?console.warn("No ingresaste un texto")
+        :(!word)
+            ?console.warn("No ingresaste una palabra de búsqueda")
+            : console.info(`La palabra ${word} se repite ${text.split(" ").filter(el=>el===word).length}`);
+
+// 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+const palindromeValidation = (word="")=>
+(!word)
+  ?console.log("No ingresaste una palabra")
+  :(word.split("").reverse().join("")===word)
+    ?console.log("La palabra es un palíndromo")
+    :console.log("La palabra no es un palíndromo");
+
+// 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. 
+
+const characterPatternDeletion = (text = "",pattern = "") =>
+    (!text)
+        ?console.warn("No ingresaste un texto")
+        :(!pattern)
+            ?console.warn("No ingresaste el patrón de búsqueda")
+            :console.log(text.replace(new RegExp(pattern,"ig"),""))
+
 
 
 export const logicObject = {
     stringCount,
     stringSlice,
     stringSplit,
-    stringRepeat
+    stringRepeat,
+    invertedString,
+    stringCounter,
+    palindromeValidation,
+    characterPatternDeletion
 }
