@@ -45,3 +45,21 @@ import {logicObject as logic} from './exercises.js';
 // logic.characterPatternDeletion("Marc Van Linden","Marc");
 // logic.characterPatternDeletion("Marc Van Linden","lINDE");
 
+// ----- 36: Ejercicios 9,10,11
+
+// logic.randomNumber();
+
+// logic.palindromeNumber();
+// logic.palindromeNumber(false);
+// logic.palindromeNumber('451');
+// logic.palindromeNumber(48);
+// logic.palindromeNumber(101);
+// logic.palindromeNumber(18.99);
+// logic.palindromeNumber(99.99);
+
+logic.factorialNumber();
+logic.factorialNumber(false);
+logic.factorialNumber('tetxt');
+logic.factorialNumber(-10);
+logic.factorialNumber(0);
+logic.factorialNumber(5);

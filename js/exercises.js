@@ -110,9 +110,42 @@ const characterPatternDeletion = (text = "",pattern = "") =>
         ?console.warn("No ingresaste un texto")
         :(!pattern)
             ?console.warn("No ingresaste el patrón de búsqueda")
-            :console.log(text.replace(new RegExp(pattern,"ig"),""))
+            :console.log(text.replace(new RegExp(pattern,"ig"),""));
 
 
+// JS 36: Ejercicios 9, 10 y 11
+
+// 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+
+const randomNumber = () => console.log(Math.floor(Math.random() * (600 - 501) + 501));
+
+// 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+const palindromeNumber = (number = 0) =>{
+    if(!number) return console.warn("No ingresaste un número");
+    if(typeof(number)!=="number") return console.error(`El valor ${number} NO es un número`);
+    
+    (number.toString().startsWith(number.toString()[0]) === number.toString().endsWith(number.toString()[0]))
+        ?console.info(`El número ${number} es capicua`)
+        :console.info(`El número ${number} no es capicua`)
+}
+
+// 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+
+const factorialNumber = (number = undefined)=>{
+    if(number===undefined) return console.warn("No ingresaste un número");
+    if(typeof(number) !=='number') return console.error(`El valor ${number} NO es un número`);
+    if(Math.sign(number) === -1) return console.error(`El valor ${number} debe ser positivo`);
+    if(Math.sign(number) === 0) return console.error(`El valor ${number} debe ser mayor CERO`);
+
+    let factorial = 1;
+
+    for(let i = number; i>1; i--){
+        factorial *= i;
+    }
+
+    console.log(`El factorial de ${number} es ${factorial}`)
+
+}
 
 export const logicObject = {
     stringCount,
@@ -122,5 +155,8 @@ export const logicObject = {
     invertedString,
     stringCounter,
     palindromeValidation,
-    characterPatternDeletion
+    characterPatternDeletion,
+    randomNumber,
+    palindromeNumber,
+    factorialNumber
 }
