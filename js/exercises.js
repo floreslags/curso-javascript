@@ -147,6 +147,59 @@ const factorialNumber = (number = undefined)=>{
 
 }
 
+// ----- JS 37: Ejercicios 12,13 y 14 -----
+
+// 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+const primeNumber = (number = undefined) =>{
+
+    if(number === undefined) return console.warn("No ingresaste un número");
+    if(typeof(number) !== 'number') return console.error(`El valor ${number} no es de tipo un numérico`);
+    if(number ===0) return console.error('El número no puede ser cero');
+    if(number ===1) return console.error('El número no puede ser 1');
+    if(Math.sign(number) === -1) return console.error("El número no puede ser negativo");
+
+    let divisible = false;
+
+    for(let i = 2; i <number; i++){
+        if(number % i === 0){
+            divisible = true;
+            break;
+        }
+    }
+
+    return (divisible)
+        ?console.info(`El número ${number} es primo`)
+        :console.info(`El número ${number} no es primo`);
+}
+// 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+const evenNumber =  (number = undefined) =>{
+    if(number === undefined) return console.warn("No ingresaste un número");
+    if(typeof(number) !== 'number') return console.error(`El valor ${number} no es de tipo un numérico`);
+    
+    return ((number % 2) === 0 )
+    ? console.info(`El número ${number} es par`)
+    : console.info(`El número ${number} es impar`);
+    
+}
+
+// 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+const degreeConverter = (number = undefined, unit= undefined)=>{
+    if(number === undefined) return console.warn("No ingresaste un número");
+    if(typeof(number) !== 'number') return console.error(`El valor ${number} no es de tipo un numérico`);
+    if(unit === undefined) return console.warn("No ingresaste el tipo de grados a convertir");
+    if(typeof(unit) !== 'string') return console.error(`El valor ${number} no es de tipo texto`);
+    if( unit.length !== 1 || !/(C|F)/.test(unit)) return console.warn("Valor de unidad no reconocido");
+
+    
+
+    return (unit === "C")
+        ? console.info(`${number} ºC es quivalente a ${Math.round((number * (9/5))+32)} ºF`)
+        :console.info(`${number} ºF es quivalente a ${Math.round((number - 32)*(5/9))} ºC`);
+
+}
+
 export const logicObject = {
     stringCount,
     stringSlice,
@@ -158,5 +211,8 @@ export const logicObject = {
     characterPatternDeletion,
     randomNumber,
     palindromeNumber,
-    factorialNumber
+    factorialNumber,
+    primeNumber,
+    evenNumber,
+    degreeConverter
 }

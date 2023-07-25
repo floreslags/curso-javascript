@@ -57,9 +57,39 @@ import {logicObject as logic} from './exercises.js';
 // logic.palindromeNumber(18.99);
 // logic.palindromeNumber(99.99);
 
-logic.factorialNumber();
-logic.factorialNumber(false);
-logic.factorialNumber('tetxt');
-logic.factorialNumber(-10);
-logic.factorialNumber(0);
-logic.factorialNumber(5);
+// logic.factorialNumber();
+// logic.factorialNumber(false);
+// logic.factorialNumber('tetxt');
+// logic.factorialNumber(-10);
+// logic.factorialNumber(0);
+// logic.factorialNumber(5);
+
+// logic.primeNumber();
+// logic.primeNumber(false);
+// logic.primeNumber(-4);
+// logic.primeNumber(0);
+// logic.primeNumber(1);
+// logic.primeNumber(2);
+// logic.primeNumber(3);
+// logic.primeNumber(4);
+// logic.primeNumber(5);
+// logic.primeNumber(6);
+// logic.primeNumber(7);
+
+// logic.evenNumber();
+// logic.evenNumber(false);
+// logic.evenNumber('false');
+// logic.evenNumber(0);
+// logic.evenNumber(1);
+// logic.evenNumber(4);
+
+logic.degreeConverter();
+logic.degreeConverter('4');
+logic.degreeConverter(4);
+logic.degreeConverter(4,true);
+logic.degreeConverter(4,'78');
+logic.degreeConverter(0,'C');
+logic.degreeConverter(100,'C');
+logic.degreeConverter(0,'F');
+logic.degreeConverter(100,'F');
+logic.degreeConverter(32,'F');
