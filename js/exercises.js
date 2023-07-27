@@ -306,6 +306,57 @@ const validatePattern = (text="",pattern= undefined)=>{
     return (pattern.test(text))?console.info(`${text} cumple con el patrón ingresado`):console.warn(`${text} no cumple con el patrón ingresado`)
 }
 
+// ----- JS 40: Ejercicios 21, 22 y 23 -----
+
+// 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+const sqrtValuesArray = (numbers = undefined) =>{
+    if(numbers === undefined) return console.warn("No ingresaste los números");
+    if(!(numbers instanceof Array)) return console.error("No es un arreglo");
+    if(numbers.length === 0) return console.warn("El arreglo está vacío")
+
+    for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+    }
+
+    return console.info(`Arreglo original: ${numbers}, \n arreglo elevado al cuadrado: ${numbers.map(el => el*el)}`);
+}
+
+// 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+const minMaxArray = (numbers = undefined) =>{
+    if(numbers === undefined) return console.warn("No ingresaste los números");
+    if(!(numbers instanceof Array)) return console.error("No es un arreglo");
+    if(numbers.length === 0) return console.warn("El arreglo está vacío");
+
+    for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+    }
+
+    return console.info(`El arreglo ${numbers} tiene ${Math.max(...numbers)} como valor máximo y ${Math.min(...numbers)} como valor mínimo`);
+}
+
+
+// 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+const evenOddNumbersArray = (numbers = undefined) =>{
+    if(numbers === undefined) return console.warn("No ingresaste los números");
+    if(!(numbers instanceof Array)) return console.error("No es un arreglo");
+    if(numbers.length === 0) return console.warn("El arreglo está vacío");
+
+    let evenNumbers = [],
+        oddNumbers = [];
+
+    for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+        (number%2 === 0)?evenNumbers.push(number):oddNumbers.push(number);
+    }
+
+    return console.info(`El arreglo ${numbers} tiene ${evenNumbers} como números pares y ${oddNumbers} como impares`);
+}
+
+
+
 export const logicObject = {
     stringCount,
     stringSlice,
@@ -327,5 +378,8 @@ export const logicObject = {
     vowelConsonatCounter,
     validateName,
     validateEmail,
-    validatePattern
+    validatePattern,
+    sqrtValuesArray,
+    minMaxArray,
+    evenOddNumbersArray
 }

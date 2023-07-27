@@ -150,13 +150,39 @@ import {logicObject as logic} from './exercises.js';
 // logic.validateEmail('sergio@mail.mx');
 // logic.validateEmail('sergio@mail.edu.mx');
 
-logic.validatePattern()
-logic.validatePattern(false)
-logic.validatePattern(5)
-logic.validatePattern("Hello world",)
-logic.validatePattern("Hello world",/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g)
-logic.validatePattern("Hello world",new RegExp("/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/","g"))
-logic.validatePattern("Hello world",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
-logic.validatePattern("sergio",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
-logic.validatePattern("sergio@mail.com",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
-logic.validatePattern("sergio@mail.com", new RegExp("/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/","i"))
+// logic.validatePattern()
+// logic.validatePattern(false)
+// logic.validatePattern(5)
+// logic.validatePattern("Hello world",)
+// logic.validatePattern("Hello world",/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g)
+// logic.validatePattern("Hello world",new RegExp("/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/","g"))
+// logic.validatePattern("Hello world",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+// logic.validatePattern("sergio",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+// logic.validatePattern("sergio@mail.com",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+// logic.validatePattern("sergio@mail.com", new RegExp("/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/","i"))
+
+// ----- JS 40: Ejercicios 21, 22 y 23 -----
+
+// logic.sqrtValuesArray();
+// logic.sqrtValuesArray({});
+// logic.sqrtValuesArray([]);
+// logic.sqrtValuesArray(45);
+// logic.sqrtValuesArray([4]);
+// logic.sqrtValuesArray([2,4,8]);
+
+
+// logic.minMaxArray()
+// logic.minMaxArray(false)
+// logic.minMaxArray(89)
+// logic.minMaxArray({})
+// logic.minMaxArray([])
+// logic.minMaxArray([false])
+// logic.minMaxArray([4,'txt'])
+// logic.minMaxArray([4,5,9])
+
+logic.evenOddNumbersArray();
+logic.evenOddNumbersArray(false);
+logic.evenOddNumbersArray({});
+logic.evenOddNumbersArray([]);
+logic.evenOddNumbersArray(['txt',false]);
+logic.evenOddNumbersArray([1,2,3,4,5,6,7,8,9,0]);
