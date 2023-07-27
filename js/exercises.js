@@ -254,10 +254,57 @@ const currentYearsCalculator = (date = undefined)=>{
 // ----- JS 39: Ejercicios 18, 19 y 20 -----
 
 // 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+const vowelConsonatCounter = (text = "")=>{
+
+    if(!text) return console.warn("No ingresaste un texto");
+    if(typeof text !== "string") return console.error(`El valor ${text} no es un texto`);
+
+    let vowels = 0, 
+    consonants = 0;
+    
+    for (const char of text) {
+
+        if(/[aeiouáéíóúüAEIOUÁÉÍÓÚÜ]/.test(char)) vowels ++;
+        
+        if(/[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/.test(char)) consonants ++; 
+    }
+    return console.info({text,vowels,consonants});
+}
+
 // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+const validateName = (name = "") => {
+    if(!name) return console.warn("No ingresaste un nombre");
+    if(typeof name !== "string") return console.error(`${name} no es un texto`);
+
+    let validName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(name);
+
+    return (validName)
+        ?console.info(`${name} es válido`)
+        :console.warn(`${name} no es válido`);
+}
 // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
 
+const validateEmail = (email = "")=>{
+    if(!email) return console.warn("No ingresaste un nombre");
+    if(typeof email !== "string") return console.error(`${email} no es un texto`);
 
+    let validEmail = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(email);
+
+    return (validEmail)?console.info(`${email} es válido`):console.warn(`${email} no es válido`);
+}
+
+// 19-20 Fusión
+
+const validatePattern = (text="",pattern= undefined)=>{
+    if(!text) return console.warn("No ingresaste un texto");
+    if(typeof text !=="string") return console.error(`${text} no es un texto`);
+
+    if(pattern === undefined) return console.warn("No ingresaste un patrón de búsqueda");
+    if(!pattern instanceof RegExp) return console.error(`${pattern} no es una expresión regular`);
+
+    return (pattern.test(text))?console.info(`${text} cumple con el patrón ingresado`):console.warn(`${text} no cumple con el patrón ingresado`)
+}
 
 export const logicObject = {
     stringCount,
@@ -276,5 +323,9 @@ export const logicObject = {
     degreeConverter,
     decimalBinaryConverter,
     priceDiscount,
-    currentYearsCalculator
+    currentYearsCalculator,
+    vowelConsonatCounter,
+    validateName,
+    validateEmail,
+    validatePattern
 }

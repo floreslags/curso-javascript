@@ -121,3 +121,42 @@ import {logicObject as logic} from './exercises.js';
 // logic.currentYearsCalculator(new Date(1993,10,27));
 
 
+// ----- JS 39: Ejercicios 18, 19 y 20 -----
+
+// logic.vowelConsonatCounter();
+// logic.vowelConsonatCounter(false);
+// logic.vowelConsonatCounter(5);
+// logic.vowelConsonatCounter('false');
+// logic.vowelConsonatCounter("45s");
+
+// logic.validateName();
+// logic.validateName(false);
+// logic.validateName(5);
+// logic.validateName("_4");
+// logic.validateName("Sergio");
+// logic.validateName("Sergio Flores");
+// logic.validateName("Sergio Flores, 29");
+
+// logic.validateEmail();
+// logic.validateEmail(false);
+// logic.validateEmail(5);
+// logic.validateEmail('45');
+// logic.validateEmail('sergio');
+// logic.validateEmail('sergio,flores@mail.es');
+// logic.validateEmail('sergio.flores@mail.es');
+// logic.validateEmail('sergio_flores@mail.es_');
+// logic.validateEmail('sergio_flores@mail.es-');
+// logic.validateEmail('sergio@mail.es');
+// logic.validateEmail('sergio@mail.mx');
+// logic.validateEmail('sergio@mail.edu.mx');
+
+logic.validatePattern()
+logic.validatePattern(false)
+logic.validatePattern(5)
+logic.validatePattern("Hello world",)
+logic.validatePattern("Hello world",/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g)
+logic.validatePattern("Hello world",new RegExp("/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/","g"))
+logic.validatePattern("Hello world",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+logic.validatePattern("sergio",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+logic.validatePattern("sergio@mail.com",/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/)
+logic.validatePattern("sergio@mail.com", new RegExp("/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/","i"))
