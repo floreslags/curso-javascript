@@ -83,13 +83,41 @@ import {logicObject as logic} from './exercises.js';
 // logic.evenNumber(1);
 // logic.evenNumber(4);
 
-logic.degreeConverter();
-logic.degreeConverter('4');
-logic.degreeConverter(4);
-logic.degreeConverter(4,true);
-logic.degreeConverter(4,'78');
-logic.degreeConverter(0,'C');
-logic.degreeConverter(100,'C');
-logic.degreeConverter(0,'F');
-logic.degreeConverter(100,'F');
-logic.degreeConverter(32,'F');
+// logic.degreeConverter();
+// logic.degreeConverter('4');
+// logic.degreeConverter(4);
+// logic.degreeConverter(4,true);
+// logic.degreeConverter(4,'78');
+// logic.degreeConverter(0,'C');
+// logic.degreeConverter(100,'C');
+// logic.degreeConverter(0,'F');
+// logic.degreeConverter(100,'F');
+// logic.degreeConverter(32,'F');
+
+// ----- JS 38: Ejercicios 15-16-17 -----
+
+// logic.decimalBinaryConverter();
+// logic.decimalBinaryConverter('45');
+// logic.decimalBinaryConverter(false);
+// logic.decimalBinaryConverter(10,'10');
+// logic.decimalBinaryConverter(10,5);
+// logic.decimalBinaryConverter(100,2);
+// logic.decimalBinaryConverter(1110010,2);
+// logic.decimalBinaryConverter(114,10);
+
+// logic.priceDiscount();
+// logic.priceDiscount(true);
+// logic.priceDiscount('47');
+// logic.priceDiscount(50);
+// logic.priceDiscount(50,true);
+// logic.priceDiscount(50,'true');
+// logic.priceDiscount(1000 ,-20);
+// logic.priceDiscount(1000 ,20);
+
+// logic.currentYearsCalculator();
+// logic.currentYearsCalculator(false);
+// logic.currentYearsCalculator({});
+// logic.currentYearsCalculator(new Date());
+// logic.currentYearsCalculator(new Date(1993,10,27));
+
+

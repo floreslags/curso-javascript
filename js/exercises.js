@@ -200,6 +200,65 @@ const degreeConverter = (number = undefined, unit= undefined)=>{
 
 }
 
+// ----- JS 38: Ejercicios 15-16-17 -----
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+
+const decimalBinaryConverter = (number = undefined,base = undefined) => {
+    if(number === undefined) return console.warn("No ingresaste un número");
+    if(typeof(number) !== 'number') return console.error(`El valor ${number} no es de tipo un numérico`);
+    if(base === undefined) return console.warn("No ingresaste una base");
+    if(typeof(base) !== 'number') return console.error(`El valor ${number} de la base no es de tipo un numérico`);
+
+    
+    if(base === 2){
+        return console.info(`El número ${number} de base ${base} = ${parseInt(number,base)} base 10`);
+    }else if(base === 10){
+        return console.info(`El número ${number} de base ${base} = ${number.toString(base)} base 2`);
+    }else{
+        return console.error("El tipo de base a convertir no es válida");
+    }
+}
+
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+
+const priceDiscount = (price = undefined, discount = 0)=>{
+
+    if(price === undefined) return console.warn("No ingresaste el precio");
+    if(typeof(price)!=='number') return console.error("El precio debe ser tipo numérico");
+    if(discount === 0) return console.warn("El descuento no puede ser 0"); 
+    if(typeof(discount)!=='number') return console.error("El descuento debe ser tipo numérico");
+    if(Math.sign(discount) === -1) return console.error("El descuento no puede ser de valor negativo");
+    
+    return console.info(`El monto total es de ${price - ((price*discount)/100)}`);
+    
+} 
+
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+const currentYearsCalculator = (date = undefined)=>{
+    if(date === undefined) return console.warn("No ingresaste una fecha");
+    if(!date instanceof Date) return console.error("No ingresaste una valor de fecha válido");
+    
+    let yearDiference = new Date().getTime() - date.getTime(),
+    msYears = 1000 * 60 * 60 * 24 * 365,
+    currentYears = Math.floor(yearDiference/msYears)
+
+    return (Math.sign(currentYears) === -1)
+        ?console.info(`Faltan ${Math.abs(currentYears)} años para ${date.getFullYear()}`)
+        :(Math.sign(currentYears) === 1)
+            ?console.info(`Han pasado ${currentYears} años desde ${date.getFullYear()}`)
+            :console.info(`No hay diferencia, estamos en el año actual ${date.getFullYear()}`)
+
+}
+
+// ----- JS 39: Ejercicios 18, 19 y 20 -----
+
+// 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+// 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+// 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+
+
 export const logicObject = {
     stringCount,
     stringSlice,
@@ -214,5 +273,8 @@ export const logicObject = {
     factorialNumber,
     primeNumber,
     evenNumber,
-    degreeConverter
+    degreeConverter,
+    decimalBinaryConverter,
+    priceDiscount,
+    currentYearsCalculator
 }
