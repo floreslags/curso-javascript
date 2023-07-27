@@ -180,9 +180,36 @@ import {logicObject as logic} from './exercises.js';
 // logic.minMaxArray([4,'txt'])
 // logic.minMaxArray([4,5,9])
 
-logic.evenOddNumbersArray();
-logic.evenOddNumbersArray(false);
-logic.evenOddNumbersArray({});
-logic.evenOddNumbersArray([]);
-logic.evenOddNumbersArray(['txt',false]);
-logic.evenOddNumbersArray([1,2,3,4,5,6,7,8,9,0]);
+// logic.evenOddNumbersArray();
+// logic.evenOddNumbersArray(false);
+// logic.evenOddNumbersArray({});
+// logic.evenOddNumbersArray([]);
+// logic.evenOddNumbersArray(['txt',false]);
+// logic.evenOddNumbersArray([1,2,3,4,5,6,7,8,9,0]);
+
+// ----- JS 41: Ejercicios 24, 25 y 26 -----
+
+// logic.ascDesValuesArray();
+// logic.ascDesValuesArray(false);
+// logic.ascDesValuesArray({});
+// logic.ascDesValuesArray([]);
+// logic.ascDesValuesArray([false]);
+// logic.ascDesValuesArray([4]);
+// logic.ascDesValuesArray([4,8]);
+
+// logic.rmDuplicatesArray();
+// logic.rmDuplicatesArray(false);
+// logic.rmDuplicatesArray({});
+// logic.rmDuplicatesArray([]);
+// logic.rmDuplicatesArray([false]);
+// logic.rmDuplicatesArray([false,4]);
+// logic.rmDuplicatesArray([false,4,4]);
+// logic.rmDuplicatesArray([false,4,4,'X']);
+// logic.rmDuplicatesArray([false,4,4,'X','X']);
+
+// logic.avgElementsArray();
+// logic.avgElementsArray(false);
+// logic.avgElementsArray({});
+// logic.avgElementsArray([]);
+// logic.avgElementsArray([1,3]);
+// logic.avgElementsArray([1,2,3,4,5,6,7,8,9,0]);

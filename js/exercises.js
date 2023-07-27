@@ -344,15 +344,90 @@ const evenOddNumbersArray = (numbers = undefined) =>{
     if(!(numbers instanceof Array)) return console.error("No es un arreglo");
     if(numbers.length === 0) return console.warn("El arreglo está vacío");
 
-    let evenNumbers = [],
-        oddNumbers = [];
+/*     let evenNumbers = [],
+        oddNumbers = []; */
+        
 
     for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+    }
+
+/*     for (const number of numbers) {
         if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
         (number%2 === 0)?evenNumbers.push(number):oddNumbers.push(number);
     }
 
-    return console.info(`El arreglo ${numbers} tiene ${evenNumbers} como números pares y ${oddNumbers} como impares`);
+    return console.info(`El arreglo ${numbers} tiene ${evenNumbers} como números pares y ${oddNumbers} como impares`); */
+
+    return console.info(`El arreglo ${numbers} tiene ${numbers.filter(num => num%2 === 0)} como números pares y ${numbers} tiene ${numbers.filter(num => num%2 === 1)} como impares`);
+}
+
+// ----- JS 41: Ejercicios 24, 25 y 26 -----
+
+// 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+
+const ascDesValuesArray = (numbers=undefined)=>{
+    if(numbers === undefined) return console.warn("No ingresaste los valores");
+    if(!(numbers instanceof Array)) return console.error("No es un arreglo");
+    if(numbers.length === 0) return console.warn("El arreglo está vacío");
+
+    for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+    }
+
+    return console.info({
+        asc:numbers.map(el=>el).sort(),
+        des:numbers.map(el=>el).sort().reverse(),
+    })
+}
+
+// 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+
+const rmDuplicatesArray = (elements = undefined) =>{
+    if(elements === undefined) return console.warn("No ingresaste los números");
+    if(!(elements instanceof Array)) return console.error("No es un arreglo");
+    if(elements.length === 0) return console.warn("El arreglo está vacío");
+    if(elements.length === 1) return console.warn("El arreglo debe tener 2 elementos como mínimo");
+
+/*     return console.info({
+        elements,
+        notDuplicated:elements.filter((value,index,self)=>self.indexOf(value) === index)
+    }); */
+
+    // Utilizando el método set(): Crea un objeto sin elementos duplicados
+
+    return console.info({
+        elements,
+        notDuplicated:[...new Set(elements)]
+    });
+
+
+
+}
+
+// 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
+const avgElementsArray = (numbers = undefined) =>{
+    if(numbers === undefined) return console.warn("No ingresaste los números");
+    if(!(numbers instanceof Array)) return console.error("No es un arreglo");
+    if(numbers.length === 0) return console.warn("El arreglo está vacío");
+
+    for (const number of numbers) {
+        if(typeof number !== "number") return console.error(`El valor ${number} no es numérico`);
+    }
+
+    // Método reduce
+
+    return console.info(
+        numbers.reduce((total,num,index,numbers)=>{
+            total += num;
+            if(index === numbers.length-1){
+                return `El promedio de ${numbers.join(" + ")} es ${total/numbers.length}`;
+            }else{
+                return total
+            }
+        })
+    );
 }
 
 
@@ -381,5 +456,8 @@ export const logicObject = {
     validatePattern,
     sqrtValuesArray,
     minMaxArray,
-    evenOddNumbersArray
+    evenOddNumbersArray,
+    ascDesValuesArray,
+    rmDuplicatesArray,
+    avgElementsArray
 }
