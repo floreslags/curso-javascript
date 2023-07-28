@@ -430,7 +430,153 @@ const avgElementsArray = (numbers = undefined) =>{
     );
 }
 
+// ----- JS 42: Ejercicio 27
 
+/* 
+27) Programa una clase llamada Pelicula.
+
+La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+  - Todos los datos del objeto son obligatorios.
+  - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+     7 restantes números.
+  - Valida que el título no rebase los 100 caracteres.
+  - Valida que el director no rebase los 50 caracteres.
+  - Valida que el año de estreno sea un número entero de 4 dígitos.
+  - Valida que el país o paises sea introducidos en forma de arreglo.
+  - Valida que los géneros sean introducidos en forma de arreglo.
+  - Valida que los géneros introducidos esten dentro de los géneros 
+     aceptados*.
+  - Crea un método estático que devuelva los géneros aceptados*.
+  - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+    decimal de una posición.
+  - Crea un método que devuelva toda la ficha técnica de la película.
+  - Apartir de un arreglo con la información de 3 películas genera 3 
+    instancias de la clase de forma automatizada e imprime la ficha técnica 
+    de cada película.
+
+* Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western. */
+
+
+class Pelicula{
+
+    constructor({id,title,director,release,country,genre,rate}){
+
+        this.id = id;
+        this.title = title;
+        this.director = director;
+        this.release = release;
+        this.country = country;
+        this.genre = genre;
+        this.rate = rate;
+
+        this.validateIMDB(id);
+        this.validateIMDBTitle(title);
+        this.validateIMDBDirector(director);
+        this.validateIMDBYearRelease(release);
+        this.validateIMDBCountries(country);
+        this.validateIMDBGenres(genre);
+        this.validateIMDBRate(rate);
+    }
+
+
+    // General methods
+
+    static get genreList(){
+
+        return ['Action', 'Adult', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary' ,'Drama', 'Family', 'Fantasy', 'Film Noir', 'Game-Show', 'History', 'Horror', 'Musical', 'Music', 'Mystery', 'News', 'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Talk-Show', 'Thriller', 'War', 'Western'];
+    }
+
+    static acceptedGeneres(){
+        return console.info(`The accepted movie genres are: ${Pelicula.genreList.join(", ")}`);
+    }
+
+    validateString(attribute,value){
+        if(!(value)) return console.warn(`El "${value}" de la propiedad ${attribute} está vacío`);
+        if(typeof(value) !== 'string') return console.error(`El "${value}" de la propiedad ${attribute} no es una cadena de texto.`);
+
+        return true;
+    }
+
+    validateNumber(property,value){
+        if(!value) return console.warn(`El valor ${value} de la propìedad ${property} está vacío`);
+        if(typeof value !== 'number') return console.error(`El valor ${value} de la propiedad ${property} debe ser numérico`);
+
+        return true;
+    }
+
+    validateArray(property,value){
+
+        if(!value) return console.warn(`El valor ${value} de la propiedad ${property} está vacío`);
+        if(!(value instanceof Array)) return console.error(`El valor ${value} de la propiedad ${property} NO es un arreglo.`);
+        if(value.length === 0) return console.error(`El arreglo ${value} de la propiedad ${property} no tiene datos`);
+
+        for(let element of value) {
+            if(typeof element !== 'string') return console.error(`El elemento ${element} no es una cadena de texto.`)
+        }
+
+        return true;
+    }
+
+    // Particular methods
+
+    validateStringLength(property,value,length){
+        if(value.length > length) return console.error(`El valor "${value}" de la propiedad ${property} excede el número de caracteres permitidos (${length})`);
+
+        return true;
+    }
+
+    validateIMDB(id){
+        if(this.validateString("IMDB id",id)){
+            if(!(/^([a-z]){2}([0-9]){7}$/.test(id))) return console.error(`El IMDB id: ${id} no es válido, debe tener 9 caracteres. Los primeros 2 valores letras minúscilas y valores numéricos los 7 restantes.`)
+        }
+    }
+
+    validateIMDBTitle(title){
+        if(this.validateString("Title",title)){
+            this.validateStringLength("Title",title,100);
+        }
+    }
+
+    validateIMDBDirector(director){
+        if(this.validateString("Director",director)){
+            this.validateStringLength("Director",director,50);
+        }
+    }
+
+    validateIMDBYearRelease(release){
+        if(this.validateNumber("Release Year",release)){
+            if(!(/^([0-9]){4}$/.test(release))) return console.error(`El año de etreno ${release} no es valido. Debe tener 4 dígitos.`)
+        }
+    }
+
+    validateIMDBCountries(countries){
+        this.validateArray("Countries",countries);
+    }
+
+    validateIMDBGenres(genres){
+        if(this.validateArray("Genres",genres)){
+
+            for(let g of genres) {
+                if(! (Pelicula.genreList.includes(g))){
+                    console.error(`Los generos ingresados ${genres} no son válidos`);
+                    Pelicula.genreList;
+                }
+            }
+        }
+    }
+
+    validateIMDBRate(rate){
+        if(this.validateNumber("Rate",rate)) 
+        return (rate < 0 || rate > 10) ? console.error(`La califiación debe ser en un rango de 0 - 10.`) : this.rate = rate.toFixed(1);
+    }
+
+    dataSheet(){
+        console.info(`Film Data Sheet\n Title: ${this.title}\n Director: ${this.director}\n Release Year: ${this.release}\n Countries: ${this.country}\n Genres: ${this.genre.join(", ")}\n Rate: ${this.rate} \n IMDB id: ${this.id} `)
+    }
+
+
+
+}
 
 export const logicObject = {
     stringCount,
@@ -459,5 +605,6 @@ export const logicObject = {
     evenOddNumbersArray,
     ascDesValuesArray,
     rmDuplicatesArray,
-    avgElementsArray
+    avgElementsArray,
+    Pelicula
 }

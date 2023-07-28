@@ -213,3 +213,52 @@ import {logicObject as logic} from './exercises.js';
 // logic.avgElementsArray([]);
 // logic.avgElementsArray([1,3]);
 // logic.avgElementsArray([1,2,3,4,5,6,7,8,9,0]);
+
+// ----- JS 42: Ejercicio 27
+
+// logic.Pelicula.acceptedGeneres();
+
+// const movie = new logic.Pelicula({
+//     id:"tt0120737",
+//     title:'Der Herr Der Ringe',
+//     director:'Peter Jackson',
+//     release:2001,
+//     country:['NZD','USA'],
+//     genre:['Action','Adventure','Drama','Fantasy'],
+//     rate:8.848
+// });
+
+// movie.dataSheet();
+
+// const myMovies = [
+
+//     {
+//         id:"tt0120737",
+//         title:'The Lord of The Rings: The FellowShip of The Ring',
+//         director:'Peter Jackson',
+//         release:2001,
+//         country:['NZD','USA'],
+//         genre:['Action','Adventure','Drama','Fantasy'],
+//         rate:8.848
+//     },
+//     {
+//         id:"tt0167261",
+//         title:'The Lord of The Rings: The Two Towers',
+//         director:'Peter Jackson',
+//         release:2002,
+//         country:['NZD','USA'],
+//         genre:['Action','Adventure','Drama','Fantasy'],
+//         rate:8.848
+//     },
+//     {
+//         id:"tt0167260",
+//         title:'The Lord of The Rings: The Return of The King',
+//         director:'Peter Jackson',
+//         release:2003,
+//         country:['NZD','USA'],
+//         genre:['Action','Adventure','Drama','Fantasy'],
+//         rate:9.125
+//     },
+// ]
+
+// myMovies.forEach(mov => new logic.Pelicula(mov).dataSheet())
