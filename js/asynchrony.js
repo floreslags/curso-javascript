@@ -28,3 +28,54 @@ console.log("Después del clear: "+tempo); */
 clearInterval(interval);
 
 console.log("Después del clearInterval: "+interval); */
+
+
+// ----- JS 45: Asincronía y Evento Loop -----
+
+
+// Código síncrono bloqueante
+
+/* (()=>{
+    console.log("Código Síncrono");
+    console.log("Inicio");
+
+    function dos(){
+        console.log("Dos");
+    }
+
+    function uno(){
+        console.log("Uno");
+        dos();
+        console.log("Tres");
+    }
+
+    uno();
+    console.log("Fin");
+
+
+})() */
+
+// Código asíncrono no bloqueante
+
+/* (()=>{
+    console.log("Código Asincrono");
+    console.log("Inicio");
+    
+    function dos(){
+        setTimeout(() => {
+            console.log("Dos");
+        }, 1000);
+    }
+    
+    function uno(){
+        setTimeout(() => {
+            console.log("Uno");
+        }, 0);
+        dos();
+        console.log("Tres");
+    }
+    
+    uno();
+    console.log("Fin")
+
+})() */
