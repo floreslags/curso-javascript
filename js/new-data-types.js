@@ -122,3 +122,63 @@ const valuesm2 = [...mapa2.values()];
 
 console.log(keysm2);
 console.log(valuesm2); */
+
+// ----- JS 52: WeakSets - WeakMaps -----
+
+/* const ws = new WeakSet();
+
+let valor1 = {"valor1":1}
+let valor2 = {"valor2":2}
+let valor3 = {"valor3":3}
+
+ws.add(valor1);
+ws.add(valor2);
+
+console.log(ws);
+console.log(ws.has(valor1));
+console.log(ws.has(valor3));
+
+ws.delete(valor2);
+console.log(ws);
+
+ws.add(valor2);
+ws.add(valor3);
+console.log(ws);
+
+setInterval(() => console.log(ws), 1000);
+
+setTimeout(() => {
+    valor1=null;
+    valor2=null;
+    valor3=null;
+    
+}, 5000); */
+
+/* const wm = new WeakMap();
+
+let key1 = {};
+let key2 = {};
+let key3 = {};
+
+wm.set(key1,1);
+wm.set(key2,2);
+console.log(wm);
+
+console.log(wm.has(key1));
+console.log(wm.has(key3));
+
+wm.delete(key2);
+console.log(wm);
+
+wm.set(key2,2);
+wm.set(key3,3);
+console.log(wm);
+
+
+setInterval(() => console.log(wm), 1000);
+
+setTimeout(() => {
+    key1 = null;
+    key2 = null;
+    key3 = null;
+}, 5000); */
