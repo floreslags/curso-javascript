@@ -112,3 +112,51 @@ sqrtNumberCallback(0,(value,result)=>{
 });
 
 }); */
+
+// ----- JS 47: Promesas ----- 
+
+/* function srqtNumberPromise(value){
+
+    if(typeof value !=='number') return Promise.reject(`Error el valor ${value} NO es un número`);
+
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve({
+                value,
+                result: value * value
+            })
+        }, 0 | Math.random()*1000);
+    });
+}
+
+
+srqtNumberPromise(0)
+    .then((resp)=>{
+        console.log("Inicia la promesa");
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        return srqtNumberPromise(1);
+    })
+    .then(resp => {
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        return srqtNumberPromise(2);
+    })
+    .then(resp => {
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        return srqtNumberPromise(3);
+    })
+    .then(resp => {
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        return srqtNumberPromise(4);
+    })
+    .then(resp => {
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        return srqtNumberPromise(5);
+    })
+    .then(resp => {
+        console.log(`Promise: ${resp.value} - ${resp.result}`);
+        console.log("Fin de la promesa");
+    })
+    .catch(err => console.error(err));
+
+*/
+
