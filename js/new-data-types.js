@@ -75,3 +75,50 @@ console.log(set.has(20));
 
 set2.clear();
 console.log(set2); */
+
+
+// ----- JS 51: Map -----
+
+/* const mapa = new Map();
+
+mapa.set("name","Sergio");
+mapa.set("lastName","Flores");
+mapa.set("age",29);
+
+console.log(mapa);
+
+console.log(mapa.size);
+console.log(mapa.has("email"));
+console.log(mapa.has("name"));
+
+console.log(mapa.get("name"));
+console.log(mapa.set("name","Ezequiel"));
+
+console.log(mapa);
+
+mapa.delete("lastName");
+
+mapa.set(19,"diecinueve")
+mapa.set(false,"falso")
+mapa.set({},{})
+
+console.log(mapa);
+
+for (const [key,value] of mapa) {
+    console.log(`Clave: ${key} - Valor: ${value}`);
+}
+
+const mapa2 = new Map([
+    ["name","Brenda"],
+    ["age",1],
+    ["animal","dog"],
+    [null,"nulo"],
+]);
+
+console.log(mapa2);
+
+const keysm2 = [...mapa2.keys()];
+const valuesm2 = [...mapa2.values()];
+
+console.log(keysm2);
+console.log(valuesm2); */
