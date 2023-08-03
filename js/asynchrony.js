@@ -79,3 +79,36 @@ console.log("Después del clearInterval: "+interval); */
     console.log("Fin")
 
 })() */
+
+
+// ----- JS 46: Callbacks -----
+
+/* function sqrtNumberCallback(value,callback){
+    setTimeout(() => {
+        callback(value,value*value)
+    }, 0 | Math.random()*1000);
+}
+
+sqrtNumberCallback(0,(value,result)=>{
+    console.log("Inicia Callback");
+    console.log(`Callback: ${value}, ${result}`);
+
+    sqrtNumberCallback(1,(value,result)=>{
+    console.log("Inicia Callback");
+    console.log(`Callback: ${value}, ${result}`);
+
+    sqrtNumberCallback(2,(value,result)=>{
+    console.log("Inicia Callback");
+    console.log(`Callback: ${value}, ${result}`)
+
+    sqrtNumberCallback(3,(value,result)=>{
+    console.log("Inicia Callback");
+    console.log(`Callback: ${value}, ${result}`)
+
+});
+
+});
+
+});
+
+}); */
