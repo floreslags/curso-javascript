@@ -182,3 +182,28 @@ setTimeout(() => {
     key2 = null;
     key3 = null;
 }, 5000); */
+
+// ----- JS 53: Iterables - Iterators -----
+
+/* const iterable = [1,2,3,4,5];
+
+// Se accede al iterador del iterable
+const iterador = iterable[Symbol.iterator]();
+
+console.log(iterable);
+console.log(iterador);
+
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+console.log(iterador.next());
+
+let next = iterador.next();
+
+while(!next.done){
+    console.log(next.value);
+    next = iterador.next();
+} */
+
