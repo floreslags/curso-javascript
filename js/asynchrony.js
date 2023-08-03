@@ -160,3 +160,76 @@ srqtNumberPromise(0)
 
 */
 
+// ----- JS 48: Funciones Asíncronas - Async - Await -----
+
+/* function srqtNumberPromise(value){
+
+    if(typeof value !=='number') return Promise.reject(`Error el valor ${value} NO es un número`);
+
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve({
+                value,
+                result: value * value
+            })
+        }, 0 | Math.random()*1000);
+    });
+}
+
+async function declaredAsyncFunction(){
+    try {
+        console.log("Inicio de función asíncrona");
+        let resp = await srqtNumberPromise(0);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(1);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(2);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise("3");
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(4);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(5);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+
+        console.log("Fin de la función asincrona");
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+declaredAsyncFunction();
+
+const expressedAsyncFunction = async ()=>{
+    try {
+        console.log("Inicio de función asíncrona");
+        let resp = await srqtNumberPromise(6);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(7);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(8);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise("9");
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+        
+        resp = await srqtNumberPromise(10);
+        console.log(`Función Asíncrona: ${resp.value} - ${resp.result}`);
+
+        console.log("Fin de la función asincrona");
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+expressedAsyncFunction(); */
+
