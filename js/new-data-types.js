@@ -259,3 +259,33 @@ let gen = generator();
 for (const y of gen) {
     console.log(y)   
 } */
+
+// ----- JS 54: Proxies -----
+
+/* const person = {
+    name:"",
+    lastName:"",
+    age:0
+}
+
+const handler = {
+    set(obj,prop,value){
+        if(Object.keys(obj).indexOf(prop) === -1){
+            return console.error(`La propiedad ${prop} no existe en el objeto persona`)
+        }
+        if((prop === "name" || prop === "lastName") && !(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(value))){
+            return console.error(`La propiedad ${prop} solo acepta letras y espacios en blanco.`)
+        }
+        obj[prop] = value;
+    }
+}
+
+const sergio = new Proxy(person,handler);
+
+sergio.name = "Sergio45";
+sergio.lastName = "Flores+";
+sergio.age = 29;
+sergio.tw = "@sergiofols";
+
+console.log(person);
+console.log(sergio); */
