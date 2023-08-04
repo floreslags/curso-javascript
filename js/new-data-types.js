@@ -289,3 +289,16 @@ sergio.tw = "@sergiofols";
 
 console.log(person);
 console.log(sergio); */
+
+// ----- JS 55: Propiedades dinámicas de los Objetos / Computed properties -----
+
+/* const userObject = {
+    [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
+}
+
+const users = ["Bruno","Brenda","William"];
+
+users.forEach((user,index)=>userObject[`id_${index}`]=user);
+
+console.log(userObject); */
+
