@@ -207,3 +207,55 @@ while(!next.done){
     next = iterador.next();
 } */
 
+
+
+// ----- JS 54: Generators -----
+
+/* function* iterable(){
+    yield "Hello";
+    console.log("Hello console");
+    yield "Hello 2";
+    console.log("We keep working with more instructions");
+    yield "Hello 3";
+    yield "Hello 4";
+}
+
+let iterator = iterable();
+
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+for (const y of iterator) {
+    console.log(y);
+}
+
+const arr = [...iterable()];
+
+console.log(arr);
+
+function sqrt(value){
+
+    setTimeout(() => {
+       return console.log({value,result:value*value}) 
+    }, Math.random() * 1000);
+}
+
+function* generator(){
+    console.log("Generator start");
+    yield sqrt(0);
+    yield sqrt(1);
+    yield sqrt(2);
+    yield sqrt(3);
+    yield sqrt(4);
+    yield sqrt(5);
+    console.log("Generator end");
+}
+
+let gen = generator();
+
+for (const y of gen) {
+    console.log(y)   
+} */
