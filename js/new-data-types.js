@@ -290,7 +290,7 @@ sergio.tw = "@sergiofols";
 console.log(person);
 console.log(sergio); */
 
-// ----- JS 57: Propiedades dinámicas de los Objetos / Computed properties -----
+// ----- JS 56: Propiedades dinámicas de los Objetos / Computed properties -----
 
 /* const userObject = {
     [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
@@ -302,8 +302,8 @@ users.forEach((user,index)=>userObject[`id_${index}`]=user);
 
 console.log(userObject); */
 
-// ----- JS 58: This -----
-console.log(window);
+// ----- JS 57: This -----
+/* console.log(window);
 console.log(this === window);
 
 this.nombre = "contexto global";
@@ -344,11 +344,50 @@ function Persona (nombre){
     that.nombre = nombre;
     // this.nombre = nombre;
     // return console.log(this.nombre);
-/*     return function(){
+    return function(){
         console.log(this.nombre);
-    } */
+    }
     return ()=>console.log(that.nombre,45);
 }
 
 let jon = new Persona("Jon");
 jon();
+ */
+
+
+// ----- JS 58: Call - Apply - bind -----
+
+/* this.lugar = "Contexto Global";
+
+function saludar(saludo,who){
+    console.log(`${saludo} ${who} desde el ${this.lugar}`);
+}
+
+saludar();
+
+const obj={
+    lugar:"Contexto Objeto"
+}
+
+saludar.call(null,"Hola","Sergio");
+saludar.call(this,"Hola","Sergio");
+saludar.call(obj,"Hola","Sergio");
+saludar.apply(this,["Adios","Sergio"]);
+saludar.apply(null,["Adios","Sergio"]);
+saludar.apply(obj,["Adios","Sergio"]);
+
+const persona = {
+    nombre:"Sergio",
+    saludar:function(){
+        console.log(`Hola ${this.nombre}`);
+    }
+}
+
+persona.saludar();
+
+const otraPersona = {
+    saludar:persona.saludar.bind(persona)
+}
+
+otraPersona.saludar() */
+
