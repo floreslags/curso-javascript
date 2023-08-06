@@ -260,7 +260,7 @@ for (const y of gen) {
     console.log(y)   
 } */
 
-// ----- JS 54: Proxies -----
+// ----- JS 55: Proxies -----
 
 /* const person = {
     name:"",
@@ -290,7 +290,7 @@ sergio.tw = "@sergiofols";
 console.log(person);
 console.log(sergio); */
 
-// ----- JS 55: Propiedades dinámicas de los Objetos / Computed properties -----
+// ----- JS 57: Propiedades dinámicas de los Objetos / Computed properties -----
 
 /* const userObject = {
     [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
@@ -302,3 +302,53 @@ users.forEach((user,index)=>userObject[`id_${index}`]=user);
 
 console.log(userObject); */
 
+// ----- JS 58: This -----
+console.log(window);
+console.log(this === window);
+
+this.nombre = "contexto global";
+
+function print(){
+    console.log(this.nombre);
+}
+
+print();
+
+const obj = {
+    nombre:'contexto Objeto',
+    imprimir:function(){
+        console.log(this.nombre);
+    }
+}
+
+obj.imprimir();
+
+const obj2 = {
+    nombre:'Contexto Objeto 2',
+    print
+}
+
+obj2.print()
+
+const obj3 = {
+    nombre:'contexto Objeto 3',
+    imprimir:()=>{
+        console.log(this.nombre);
+    }
+}
+
+obj3.imprimir();
+
+function Persona (nombre){
+    const that = this;
+    that.nombre = nombre;
+    // this.nombre = nombre;
+    // return console.log(this.nombre);
+/*     return function(){
+        console.log(this.nombre);
+    } */
+    return ()=>console.log(that.nombre,45);
+}
+
+let jon = new Persona("Jon");
+jon();
