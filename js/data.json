@@ -1,0 +1,12 @@
+{
+    "string":"Sergio",
+    "number":29,
+    "boolean":true,
+    "array":["running","programing","body stretching"],
+    "object":{
+        "tw":"@sergiofols",
+        "email":"sergiofl@mail.com"
+    },
+    "null":null
+}
+
