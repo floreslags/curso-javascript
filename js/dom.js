@@ -92,3 +92,55 @@ console.log($DOMLink.getAttribute("data-description"));
 console.log($DOMLink.hasAttribute("data-id"));
 $DOMLink.removeAttribute("data-id");
 console.log($DOMLink.hasAttribute("data-id")); */
+
+// ----- JS 64: DOM - estilos y variables  -----
+
+
+const $DOMLink = document.querySelector(".link-dom");
+
+console.log($DOMLink);
+
+// Capturar los valores de los estilos
+console.log($DOMLink.style);
+
+console.log($DOMLink.getAttribute("style"));
+console.log($DOMLink.style.backgroundColor);
+console.log($DOMLink.style.color);
+
+console.log(window.getComputedStyle($DOMLink));
+console.log(window.getComputedStyle($DOMLink).getPropertyValue("color"));
+
+// Asignar valores de los estilos
+$DOMLink.style.setProperty("text-decoration","none");
+$DOMLink.style.setProperty("display","block");
+
+$DOMLink.style.width = "50%";
+$DOMLink.style.textAlign = "center";
+$DOMLink.style.marginLeft = "auto";
+$DOMLink.style.marginRight = "auto";
+$DOMLink.style.padding = "1rem";
+$DOMLink.style.borderRadius = ".5rem";
+
+console.log($DOMLink.style);
+console.log($DOMLink.getAttribute("style"));
+console.log(window.getComputedStyle($DOMLink));
+
+// CSS Custom properties / Variables dinámicas
+
+const $html = document.documentElement,
+    $body = document.body;
+
+let darkColorVar = getComputedStyle($html).getPropertyValue("--dark-color"),
+    yellowColorVar = getComputedStyle($html).getPropertyValue("--yellow-color");
+
+console.log(darkColorVar,yellowColorVar);
+
+
+
+$body.style.backgroundColor = darkColorVar;
+$body.style.color = yellowColorVar;
+
+$html.style.setProperty("--dark-color","#000");
+darkColorVar = getComputedStyle($html).getPropertyValue("--dark-color");
+
+$body.style.setProperty("background-color",darkColorVar);
