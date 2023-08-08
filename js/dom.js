@@ -203,3 +203,27 @@ $whatIsDOM.innerText = text;
 $whatIsDOM.textContent = text;
 $whatIsDOM.innerHTML = text;
 $whatIsDOM.outerHTML = text; */
+
+// ----- JS 67: DOM - Recorriendo el DOM / DOM traversing  -----
+
+
+/* // Referencia del elemento
+const $cards = document.querySelector('.cards');
+
+// Visualización de elementos INTERNOS del elemento padre
+
+console.log($cards);
+console.log($cards.children);
+console.log($cards.children[2]);
+console.log($cards.firstElementChild);
+console.log($cards.lastElementChild);
+
+// Visualización de elementos EXTERNOS del elemento padre
+console.log($cards.parentElement);
+console.log($cards.previousSibling);
+console.log($cards.nextSibling);
+console.log($cards.previousElementSibling);
+console.log($cards.nextElementSibling);
+console.log($cards.closest("div"));
+
+console.log($cards.children[3].closest("section")); */
