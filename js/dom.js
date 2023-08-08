@@ -227,3 +227,78 @@ console.log($cards.nextElementSibling);
 console.log($cards.closest("div"));
 
 console.log($cards.children[3].closest("section")); */
+
+// ----- JS 68: DOM - Creando elementos y fragmentos -----
+
+/* const $figure = document.createElement('figure'),
+    $img = document.createElement('img'),
+    $figCaption = document.createElement('figcaption'),
+    $figCaptionText = document.createTextNode('Animales'),
+    $cards = document.querySelector('.cards'),
+    $figure2 = document.createElement('figure');
+
+
+// Método correcto
+
+$img.setAttribute("src","https://loremflickr.com/320/240/animals");
+$img.setAttribute("alt","Animales");
+
+$figure.classList.add("card");
+
+$figCaption.appendChild($figCaptionText);
+$figure.appendChild($img);
+$figure.appendChild($figCaption);
+$cards.appendChild($figure);
+
+// Método alternativo
+$figure2.innerHTML = `
+    <img src="https://loremflickr.com/320/240/people" alt="People">
+    <figcaption>People</figcaption>
+`;
+
+$figure2.classList.add('card');
+$cards.appendChild($figure2);
+
+// Creación de elementos de forma dinámica
+
+const estaciones = ["Primavera","Verano","Otoño","Invierno"],
+$ul = document.createElement("ul");
+
+document.write("<h3>Estaciones del Año</h3>");
+
+document.body.appendChild($ul);
+
+estaciones.forEach(el => {
+    const $li = document.createElement("li");
+    $li.textContent = el;
+    $ul.appendChild($li);
+});
+
+// Opción dinámica alternativa. No es lo ideal, debido a que hay muchas interacciones sobre el DOM.
+const continentes = ["Africa","America","Asia","Europa","Oceania"],
+$ul2 = document.createElement("ul");
+
+document.write("<h3>Continentes del mundo</h3>");
+document.body.appendChild($ul2);
+
+$ul2.innerHTML = ""; // Es importante iniciar el elemento como vacío
+
+continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`);
+
+const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+// Creación de fragmentos
+
+const $ul3 = document.createElement("ul"),
+    $fragment = document.createDocumentFragment();
+
+meses.forEach(el=>{
+    const $li = document.createElement("li");
+    $li.textContent = el;
+    $fragment.appendChild($li);
+});
+
+document.write("<h3>Meses del año</h3>");
+
+$ul3.appendChild($fragment);
+document.body.appendChild($ul3); */
