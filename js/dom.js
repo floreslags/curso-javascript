@@ -96,7 +96,7 @@ console.log($DOMLink.hasAttribute("data-id")); */
 // ----- JS 64: DOM - estilos y variables  -----
 
 
-const $DOMLink = document.querySelector(".link-dom");
+/* const $DOMLink = document.querySelector(".link-dom");
 
 console.log($DOMLink);
 
@@ -143,4 +143,40 @@ $body.style.color = yellowColorVar;
 $html.style.setProperty("--dark-color","#000");
 darkColorVar = getComputedStyle($html).getPropertyValue("--dark-color");
 
-$body.style.setProperty("background-color",darkColorVar);
+$body.style.setProperty("background-color",darkColorVar); */
+
+// ----- JS 65: DOM - Clases  -----
+
+const $card = document.querySelector('.card');
+
+// Visualizar clases
+
+console.log($card);
+console.log($card.className);
+console.log($card.classList.contains('rotate-45'));
+
+// Agregar clases
+
+$card.classList.add('rotate-45')
+console.log($card.className);
+console.log($card.classList.contains('rotate-45'));
+
+// Eliminar clases
+$card.classList.remove('rotate-45')
+console.log($card.classList.contains('rotate-45'));
+
+// Intercambiar clases
+$card.classList.toggle('rotate-45');
+console.log($card.classList.contains('rotate-45'));
+$card.classList.toggle('rotate-45');
+console.log($card.classList.contains('rotate-45'));
+
+// Reemplazar clases
+$card.classList.toggle('rotate-45');
+$card.classList.replace('rotate-45','rotate-135');
+
+
+// Gestionar múltiples clases
+$card.classList.add('opacity-80','sepia');
+$card.classList.remove('opacity-80','sepia');
+$card.classList.toggle('opacity-80','sepia');
