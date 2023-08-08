@@ -302,3 +302,43 @@ document.write("<h3>Meses del año</h3>");
 
 $ul3.appendChild($fragment);
 document.body.appendChild($ul3); */
+
+// ----- JS 69: DOM - Plantillas HTML -----
+
+const $cards = document.querySelector(".cards"),
+    $template = document.getElementById('card-template').content,
+    $fragment = document.createDocumentFragment(),
+    cardContent = [
+        {
+            title:"Tecnología",
+            img:"https://loremflickr.com/320/240/computer"
+        },
+        {
+            title:"Animales",
+            img:"https://loremflickr.com/320/240/animals"
+        },
+        {
+            title:"Arquitectura",
+            img:"https://loremflickr.com/320/240/architecture"
+        },
+        {
+            title:"Personas",
+            img:"https://loremflickr.com/320/240/people"
+        },
+        {
+            title:"Naturaleza",
+            img:"https://loremflickr.com/320/240/nature"
+        },
+    ];
+
+cardContent.forEach(el=>{
+    $template.querySelector("img").setAttribute("src",el.img);
+    $template.querySelector("img").setAttribute("alt",el.title);
+    $template.querySelector("figcaption").textContent=el.title;
+
+    let $clone = document.importNode($template,true);
+
+    $fragment.appendChild($clone);
+});
+
+$cards.appendChild($fragment);
