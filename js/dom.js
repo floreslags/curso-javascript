@@ -305,7 +305,7 @@ document.body.appendChild($ul3); */
 
 // ----- JS 69: DOM - Plantillas HTML -----
 
-const $cards = document.querySelector(".cards"),
+/* const $cards = document.querySelector(".cards"),
     $template = document.getElementById('card-template').content,
     $fragment = document.createDocumentFragment(),
     cardContent = [
@@ -341,4 +341,28 @@ cardContent.forEach(el=>{
     $fragment.appendChild($clone);
 });
 
-$cards.appendChild($fragment);
+$cards.appendChild($fragment); */
+
+// ----- JS 70: DOM - Modificando elementos (modo antiguo) -----
+
+/* const $cards = document.querySelector('.cards'),
+    $newCard = document.createElement('figure'),
+    $cloneCards = $cards.cloneNode(true);
+
+
+$newCard.innerHTML = `
+
+    <img src="https://loremflickr.com/320/240/any" alt="Any">
+    <figcaption>Any</figcaption>
+
+`;
+
+$newCard.classList.add("card");
+
+// $cards.replaceChild($newCard,$cards.children[2]);
+// $cards.insertBefore($newCard,$cards.firstElementChild);
+// $cards.removeChild($cards.lastElementChild);
+
+document.body.appendChild($cloneCards); */
+
+
