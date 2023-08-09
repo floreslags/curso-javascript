@@ -463,3 +463,24 @@ $eventDivs.forEach(div =>{
         once:true
     });
 }); */
+
+// ----- JS 75: DOM - stopPropagation - preventDefault -----
+const $eventDivs =document.querySelectorAll('.event-flow div'),
+$eventLink = document.querySelector('.event-flow a');
+
+function eventFlow(e){
+    console.log(`Hello from ${this.className}, click originated by ${e.target.className}`);
+    e.stopPropagation();
+}
+
+console.log($eventDivs);
+
+$eventDivs.forEach(div =>{
+    div.addEventListener('click',eventFlow);
+});
+
+$eventLink.addEventListener('click',(e)=>{
+    alert('Hello from Link Event Element');
+    e.preventDefault();
+    e.stopPropagation();
+})
