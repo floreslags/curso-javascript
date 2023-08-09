@@ -413,3 +413,31 @@ $eventoMultiple.addEventListener('click',(e)=>{
     console.log(e.type);
     console.log(e.target);
 }); */
+
+// ----- JS 72: DOM - Eventos con parámetros - remover eventos -----
+
+function sayHello(name = "Unknown"){
+    alert(`Hello ${name} - ${event}`);
+    console.log(event);
+}
+
+const removeDbclick = (e)=>{
+    alert(`Removing event ${e.type}`);
+    console.log(e);
+    $removeEvent.removeEventListener('dblclick',removeDbclick);
+    $removeEvent.disabled = true;
+}
+
+
+const $eventoMultiple = document.getElementById('evento-multiple'),
+    $removeEvent = document.getElementById('evento-remover');
+
+$eventoMultiple.addEventListener('click',()=>{
+    sayHello();
+    sayHello('Sergio');
+});
+
+// Eliminar eventos de un elemento
+
+$removeEvent.addEventListener('dblclick',removeDbclick);
+
