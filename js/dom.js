@@ -365,4 +365,26 @@ $newCard.classList.add("card");
 
 document.body.appendChild($cloneCards); */
 
+// ----- JS 71: DOM - Modificando elementos (nuevo método) -----
 
+/* const $cards = document.querySelector('.cards'),
+    $newCard = document.createElement('figure');
+
+let $contentCard = `
+
+    <img src="https://loremflickr.com/320/240/any" alt="Any">
+    <figcaption></figcaption>
+
+`;
+
+$newCard.classList.add("card");
+
+$newCard.insertAdjacentHTML("beforeend",$contentCard);
+$newCard.querySelector('figcaption').insertAdjacentText("afterbegin","Any");
+
+// $cards.insertAdjacentElement("afterbegin",$newCard);
+
+$cards.prepend($newCard);
+$cards.before($newCard);
+$cards.append($newCard);
+$cards.after($newCard); */
