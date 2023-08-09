@@ -388,3 +388,28 @@ $cards.prepend($newCard);
 $cards.before($newCard);
 $cards.append($newCard);
 $cards.after($newCard); */
+
+// ----- JS 72: DOM - Manejadores de eventos -----
+
+/* function helloWorld(){
+    alert("Hello World");
+    console.log(event);
+}
+
+const $eventoSemantico = document.getElementById('evento-semantico'),
+$eventoMultiple = document.getElementById('evento-multiple');
+
+$eventoSemantico.onclick = helloWorld;
+
+$eventoSemantico.onclick = (e)=>{
+    alert('Hello World, semantic event Handler');
+    console.log(e);
+}
+
+$eventoMultiple.addEventListener('click',helloWorld);
+$eventoMultiple.addEventListener('click',(e)=>{
+    alert('Multiple Event Handler');
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+}); */
