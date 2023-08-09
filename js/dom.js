@@ -465,7 +465,7 @@ $eventDivs.forEach(div =>{
 }); */
 
 // ----- JS 75: DOM - stopPropagation - preventDefault -----
-const $eventDivs =document.querySelectorAll('.event-flow div'),
+/* const $eventDivs =document.querySelectorAll('.event-flow div'),
 $eventLink = document.querySelector('.event-flow a');
 
 function eventFlow(e){
@@ -483,4 +483,27 @@ $eventLink.addEventListener('click',(e)=>{
     alert('Hello from Link Event Element');
     e.preventDefault();
     e.stopPropagation();
-})
+}); */
+
+// ----- JS 76: DOM - Delegación de eventos -----
+
+/* const $eventDivs = document.querySelectorAll('.event-flow div'),
+$eventLink = document.querySelector('.event-flow a');
+
+function eventFlow(e){
+    console.log(`Hello from ${e.target.className}, click originated by ${e.target.className}`);
+}
+
+// Delegación de los eventos sobre el "documento raíz"
+document.addEventListener('click',(e)=>{
+    console.log('Click en: ',e.target);
+
+    if(e.target.matches('.event-flow div')){
+        eventFlow(e);
+    }
+
+    if(e.target.matches('.event-flow a')){
+        alert('Hello from Link Event Element');
+        e.preventDefault();
+    }
+}); */
