@@ -414,9 +414,9 @@ $eventoMultiple.addEventListener('click',(e)=>{
     console.log(e.target);
 }); */
 
-// ----- JS 72: DOM - Eventos con parámetros - remover eventos -----
+// ----- JS 73: DOM - Eventos con parámetros - remover eventos -----
 
-function sayHello(name = "Unknown"){
+/* function sayHello(name = "Unknown"){
     alert(`Hello ${name} - ${event}`);
     console.log(event);
 }
@@ -439,5 +439,27 @@ $eventoMultiple.addEventListener('click',()=>{
 
 // Eliminar eventos de un elemento
 
-$removeEvent.addEventListener('dblclick',removeDbclick);
+$removeEvent.addEventListener('dblclick',removeDbclick); */
 
+// ----- JS 74: DOM - Flujo de eventos - Burbuja - Captura -----
+
+/* const $eventDivs =document.querySelectorAll('.event-flow div');
+
+function eventFlow(e){
+    console.log(`Hello from ${this.className}, click originated by ${e.target.className}`)
+}
+
+console.log($eventDivs);
+
+$eventDivs.forEach(div =>{
+    // Bubble fase
+    //div.addEventListener('click',eventFlow);
+    //div.addEventListener('click',eventFlow,false);
+    
+    // Capture fase
+    //div.addEventListener('click',eventFlow,true);
+    div.addEventListener('click',eventFlow,{
+        capture:false,
+        once:true
+    });
+}); */

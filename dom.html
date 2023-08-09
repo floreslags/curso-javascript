@@ -43,6 +43,16 @@
             filter: sepia(1);
         }
 
+        .event-flow div{
+            padding: 4rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .one{background-color: yellow;}
+        .two{background-color: gold;}
+        .three{background-color: lightyellow;}
+
     </style>
 </head>
 <body>
@@ -120,7 +130,7 @@
 
     <h3>Eventos en Javascriop</h3>
     <h4>Manejadores de Eventos</h4>
-
+    
     <button onclick="helloWorld()">Evento con atributo HTML</button>
     
     <br><br>
@@ -129,6 +139,15 @@
     <button id="evento-multiple">Evento con manejador múltiple</button>
     <br><br>
     <button id="evento-remover">Removiendo un evento con Manejadores multiples</button>
+    <br><br>
+    <h4>Flujo de Eventos</h4>
+    <section class="event-flow">
+        <div class="one">1
+            <div class="two">2
+                <div class="three">3</div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="js/dom.js"></script>
