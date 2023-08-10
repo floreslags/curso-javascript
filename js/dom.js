@@ -567,3 +567,37 @@ $btnCerrar.addEventListener('click',e=>{
 $btnImprimir.addEventListener('click',e=>{
     window.print();
 }); */
+
+// ----- JS 79: BOM - objetos:(url, historial y navegador)  -----
+
+/* console.log('***** OBJETO URL *****');
+console.log(location);
+console.log(location.origin);
+console.log(location.protocol);
+console.log(location.host);
+console.log(location.hostname);
+console.log(location.port);
+console.log(location.href);
+console.log(location.pathname);
+console.log(location.hash);
+console.log(location.search); */
+
+/* console.log('***** OBJETO HISTORIAL *****');
+console.log(history);
+console.log(history.length);
+console.log(history.back(3));
+console.log(history.forward(3));
+console.log(history.go(1)); */
+
+/* console.log('***** OBJETO NAVEGADOR *****');
+
+console.log(navigator);
+console.log(navigator.connection);
+console.log(navigator.geolocation);
+console.log(navigator.mediaDevices);
+console.log(navigator.mimeTypes);
+console.log(navigator.onLine);
+console.log(navigator.serviceWorker);
+console.log(navigator.storage);
+console.log(navigator.usb);
+console.log(navigator.userAgent); */
