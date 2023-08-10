@@ -510,7 +510,7 @@ document.addEventListener('click',(e)=>{
 
 // ----- JS 77: BOM - Propiedades y eventos -----
 
-window.addEventListener('resize',(e)=>{
+/* window.addEventListener('resize',(e)=>{
     console.clear();
     console.log('***** Evento resize *****');
     console.log(window.innerWidth);
@@ -540,4 +540,30 @@ document.addEventListener('DOMContentLoaded',e=>{
     console.log(window.screenX);
     console.log(window.screenY);
     console.log(e);
+}); */
+
+// ----- JS 78: BOM - Métodos -----
+
+/* // window.alert('Alerta');
+// window.confirm('Confirmación');
+// window.prompt('Aviso');
+
+let ventana;
+
+const $btnAbrir = document.getElementById('abrir-ventana'),
+    $btnCerrar = document.getElementById('cerrar-ventana'),
+    $btnImprimir = document.getElementById('imprimir-ventana');
+
+
+$btnAbrir.addEventListener('click',e=>{
+    //window.open('https://jonmircha.com/');
+    ventana = open('https://jonmircha.com/');
 });
+
+$btnCerrar.addEventListener('click',e=>{
+    ventana.close();
+});
+
+$btnImprimir.addEventListener('click',e=>{
+    window.print();
+}); */
