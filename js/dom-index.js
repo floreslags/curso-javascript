@@ -5,5 +5,6 @@ const d = document;
 
 d.addEventListener("DOMContentLoaded",(e)=>{
     hamburgerMenu(".panel-btn",".panel",".menu a");
-    digitalClock('#reloj','#activar-reloj','#desactivar-reloj')
+    digitalClock('#reloj','#activar-reloj','#desactivar-reloj');
+    alarm('assets/sound/alarm.wav','#activar-alarma','#desactivar-alarma');
 });

@@ -1,8 +1,8 @@
 const d = document;
 
-let clockTempo;
 
 export function digitalClock(clock,playBtn,stopBtn){
+    let clockTempo;
     d.addEventListener('click',e=>{
         if(e.target.matches(playBtn)){
             clockTempo = setInterval(() => {
@@ -22,6 +22,27 @@ export function digitalClock(clock,playBtn,stopBtn){
     })
 }
 
-export function alarm(){
+export function alarm(sound,playBtn,stopBtn){
+    let alarmTempo;
+    const $alarm = d.createElement("audio");
+    $alarm.src = sound;
+
+    d.addEventListener('click',(e)=>{
+        
+        if(e.target.matches(playBtn)){
+
+            alarmTempo = setTimeout(() => {
+                $alarm.play();
+            }, 2000);
+            e.target.disabled = true;
+        }
+
+        if(e.target.matches(stopBtn)){
+            clearTimeout(alarmTempo);
+            $alarm.pause();
+            $alarm.currentTime = 0;
+            d.querySelector(playBtn).disabled = false;
+        }
+    })
 
 }
