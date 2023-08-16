@@ -165,3 +165,32 @@ img{
     opacity: 0;
     visibility: hidden;
 }
+
+/* ----- DARK THEME BUTTON ----- */
+
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}

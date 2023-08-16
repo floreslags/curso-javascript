@@ -3,6 +3,7 @@ import { digitalClock,alarm } from "./dom/reloj.js";
 import { moveBall, shortCuts } from "./dom/key.js";
 import countdown from "./dom/countdown.js";
 import topScrollButton from "./dom/scroll-button.js";
+import darkTheme from "./dom/dark-theme.js";
 
 const d = document;
 
@@ -12,6 +13,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     alarm('assets/sound/alarm.wav','#activar-alarma','#desactivar-alarma');
     countdown('countdown','Aug 15, 2023 16:17:00','Happy Birthday Sergio 🎂 !');
     topScrollButton('.scroll-top-btn');
+    darkTheme('.dark-theme-btn','dark-mode');
 });
 
 
