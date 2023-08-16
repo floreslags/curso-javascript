@@ -13,7 +13,6 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     alarm('assets/sound/alarm.wav','#activar-alarma','#desactivar-alarma');
     countdown('countdown','Aug 15, 2023 16:17:00','Happy Birthday Sergio 🎂 !');
     topScrollButton('.scroll-top-btn');
-    darkTheme('.dark-theme-btn','dark-mode');
 });
 
 
@@ -21,3 +20,5 @@ d.addEventListener("keypress",e=>{
     shortCuts(e);
     moveBall(e,'.ball','.stage');
 });
+
+darkTheme('.dark-theme-btn','dark-mode');
