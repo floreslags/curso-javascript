@@ -136,3 +136,32 @@ img{
     border-radius: 50%;
     background-color: var(--main-color);
 }
+
+/* ----- SCROLL BUTTON ----- */
+
+.scroll-top-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: calc(4.25rem + 1vw);
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
