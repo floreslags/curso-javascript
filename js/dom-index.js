@@ -7,6 +7,7 @@ import darkTheme from "./dom/dark-theme.js";
 import responsiveMedia from "./dom/responsive-object.js";
 import responsiveTester from "./dom/responsive-tester.js";
 import deviceDetector from "./dom/device_detector.js";
+import networkStatus from "./dom/network_detector.js";
 
 const d = document;
 
@@ -39,3 +40,4 @@ d.addEventListener("keypress",e=>{
 });
 
 darkTheme('.dark-theme-btn','dark-mode');
+networkStatus();
