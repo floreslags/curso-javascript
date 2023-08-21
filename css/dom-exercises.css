@@ -72,6 +72,7 @@ img{
     opacity: 0;
     visibility: hidden;
     transition: transform 0.5s ease,opacity 0.5s ease;
+    overflow-y: auto;
 }
 
 .panel.is-active{

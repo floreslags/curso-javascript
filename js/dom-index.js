@@ -9,6 +9,7 @@ import responsiveTester from "./dom/responsive-tester.js";
 import deviceDetector from "./dom/device_detector.js";
 import networkStatus from "./dom/network_detector.js";
 import webcamDetector from "./dom/webcam_detector.js";
+import geolocationDetector from "./dom/geolocation.js";
 
 const d = document;
 
@@ -33,6 +34,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
         responsiveTester('responsive-tester');
         deviceDetector('user-device');
         webcamDetector('webcam');
+        geolocationDetector('geolocation');
+
 });
 
 
