@@ -11,6 +11,7 @@ import networkStatus from "./dom/network_detector.js";
 import webcamDetector from "./dom/webcam_detector.js";
 import geolocationDetector from "./dom/geolocation.js";
 import searchFilters from "./dom/search_filter.js";
+import digitalRaffle from "./dom/digital_raffle.js";
 
 const d = document;
 
@@ -37,6 +38,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
         webcamDetector('webcam');
         geolocationDetector('geolocation');
         searchFilters('.card-filter','.card');
+        digitalRaffle('#winner-btn','.player');
 
 });
 
