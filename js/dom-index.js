@@ -12,6 +12,7 @@ import webcamDetector from "./dom/webcam_detector.js";
 import geolocationDetector from "./dom/geolocation.js";
 import searchFilters from "./dom/search_filter.js";
 import digitalRaffle from "./dom/digital_raffle.js";
+import responsiveSlider from "./dom/responsive-slider.js";
 
 const d = document;
 
@@ -39,6 +40,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
         geolocationDetector('geolocation');
         searchFilters('.card-filter','.card');
         digitalRaffle('#winner-btn','.player');
+        responsiveSlider();
 
 });
 
@@ -49,4 +51,5 @@ d.addEventListener("keypress",e=>{
 });
 
 darkTheme('.dark-theme-btn','dark-mode');
+
 networkStatus();
