@@ -14,6 +14,8 @@ export default function contactFormValidation(){
         $span.classList.add("contact-form-error","none");
     });
 
+    // Lectura de escritura con teclado
+
     d.addEventListener("keyup",e=>{
         if(e.target.matches(".contact-form [required]")){
             let $input = e.target,
@@ -37,6 +39,30 @@ export default function contactFormValidation(){
             }
 
         }
+    });
+
+    // Envío de formulario
+
+    d.addEventListener("submit",e=>{
+        // e.preventDefault();
+        // alert('Enviando formulario');
+
+        const $loader = d.querySelector(".contact-form-loader"),
+        $response = d.querySelector(".contact-form-response");
+
+        $loader.classList.remove("none");
+        
+        setTimeout(() => {
+            $loader.classList.add("none");
+            $response.classList.remove("none");
+            $form.reset();
+
+            setTimeout(() => {
+                $response.classList.add("none");
+            }, 3000);
+
+        }, 3000);
+
     });
 
 }
