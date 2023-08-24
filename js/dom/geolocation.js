@@ -21,7 +21,7 @@ export default function geolocationDetector(id){
             </ul>
             <a href="https:www.google.com/maps/@${coords.latitude},@${coords.longitude},20z" target="_blank" rel="noopener">Ver en google maps</a>
         `;
-        console.log(position);
+        //console.log(position);
 
 
     };
@@ -32,7 +32,7 @@ export default function geolocationDetector(id){
                 <mark>Error ${err.code} : ${err.message}</mark>
             </p>
         `;
-        console.log(err);
+        //console.log(err);
     };
 
     n.geolocation.getCurrentPosition(success,error,options);

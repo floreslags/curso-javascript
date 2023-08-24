@@ -20,7 +20,7 @@ export default function webcamDetector(id){
                 <mark>${err}</mark>
             </p>`
             )
-            console.log(`Hubo un problema. Error: ${err}`);
+            //console.log(`Hubo un problema. Error: ${err}`);
         });
     }
 }

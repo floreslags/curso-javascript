@@ -14,6 +14,7 @@ import searchFilters from "./dom/search_filter.js";
 import digitalRaffle from "./dom/digital_raffle.js";
 import responsiveSlider from "./dom/responsive-slider.js";
 import scrollSpy from "./dom/scroll_spy.js";
+import smartVideo from "./dom/smart_video.js";
 
 const d = document;
 
@@ -43,6 +44,7 @@ d.addEventListener("DOMContentLoaded",(e)=>{
         digitalRaffle('#winner-btn','.player');
         responsiveSlider();
         scrollSpy();
+        smartVideo();
 
 });
 
