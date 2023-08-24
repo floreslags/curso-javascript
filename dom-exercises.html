@@ -38,7 +38,7 @@
         <a href="#section11" data-scroll-spy>Digital Raffle</a>
         <a href="#section12" data-scroll-spy>Responsive Slider</a>
         <a href="#section13" data-scroll-spy>Smart Video</a>
-        <a href="#section14" data-scroll-spy>Section 14</a>
+        <a href="#section14" data-scroll-spy>Form Validations</a>
         <a href="#section15" data-scroll-spy>Section 15</a>
       </nav>
     </aside>
@@ -183,7 +183,28 @@
           <video src="assets/video/stock-footage-man-puts-fingers-down-in-lake-kayaking-against-backdrop-of-golden-sunset-unity-harmony-nature.webm" muted controls loop data-smart-video></video>
         </section>
         <section class="section" data-scroll-spy id="section14">
-          <h2>Section 14</h2>
+          <h2>Form Validation</h2>
+          <form class="contact-form">
+            <legend>Envíanos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Escribe tu nombre" title="El nombre solo acepta letras y espacios en blanco" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+
+            <input type="email" name="email" placeholder="Escribe tu email" title="Email incorrecto" required pattern="^[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9]+(\.[a-z0-9]+)*(\.[a-z0-9]{2,15})$">
+            
+            <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+
+            <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no debe exceder 255 caracteres" required></textarea>
+            
+            <input type="submit" value="Enviar">
+            
+            <div class="contact-form-loader none">
+              <img src="assets/img/spinning-circles.svg" alt="Cargando">
+            </div>
+
+            <div class="contact-form-response none">
+              <p>Los datos han sido enviados</p>
+            </div>
+            
+          </form>
         </section>
         <section class="section" data-scroll-spy id="section15">
           <h2>Section 15</h2>
