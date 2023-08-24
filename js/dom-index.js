@@ -15,6 +15,7 @@ import digitalRaffle from "./dom/digital_raffle.js";
 import responsiveSlider from "./dom/responsive-slider.js";
 import scrollSpy from "./dom/scroll_spy.js";
 import smartVideo from "./dom/smart_video.js";
+import contactFormValidation from "./dom/form_validation.js";
 
 const d = document;
 
@@ -45,14 +46,15 @@ d.addEventListener("DOMContentLoaded",(e)=>{
         responsiveSlider();
         scrollSpy();
         smartVideo();
+        contactFormValidation();
 
 });
 
 
-d.addEventListener("keypress",e=>{
+/* d.addEventListener("keypress",e=>{
     shortCuts(e);
     moveBall(e,'.ball','.stage');
-});
+}); */
 
 darkTheme('.dark-theme-btn','dark-mode');
 
