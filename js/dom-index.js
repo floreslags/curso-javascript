@@ -16,6 +16,7 @@ import responsiveSlider from "./dom/responsive-slider.js";
 import scrollSpy from "./dom/scroll_spy.js";
 import smartVideo from "./dom/smart_video.js";
 import contactFormValidation from "./dom/form_validation.js";
+import speechReader from "./dom/text_narrator.js";
 
 const d = document;
 
@@ -57,5 +58,5 @@ d.addEventListener("DOMContentLoaded",(e)=>{
 }); */
 
 darkTheme('.dark-theme-btn','dark-mode');
-
 networkStatus();
+speechReader();
