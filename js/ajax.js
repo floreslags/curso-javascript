@@ -72,7 +72,7 @@
         $fetch.innerHTML = `Error ${err.status}: ${msg}`
     })
     .finally(()=>{
-        console.log('Código de ejecución independiente a la respuesta FETCH')
+        //console.log('Código de ejecución independiente a la respuesta FETCH')
     });
 })();
 
@@ -104,9 +104,41 @@
             let msg = err.statusText || 'Ocurrió un error';
             $fetch.innerHTML = `Error ${err.status}: ${msg}`
         } finally{
-            console.log('Independiente a try catch')
+            //console.log('Independiente a try catch')
         }
     }
 
     getData();
+})();
+
+(()=>{
+        const $axios = document.getElementById('axios'),
+    $fragment = document.createDocumentFragment();
+
+    let externo = 'https://jsonplaceholder.typicode.com/users',
+    interno = 'assets/users.json';
+
+    axios.get(externo)
+    .then(res=>{
+        console.log(res);
+
+        let data = res.data;
+
+        data.forEach(el=>{
+            const $li = document.createElement('li');
+            $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`; 
+            $fragment.appendChild($li);
+        });
+        
+        $axios.appendChild($fragment);
+    })
+    .catch(err =>{
+        let msg = err.response.statusText || 'Ocurrió un error';
+        $axios.innerHTML = `Error ${err.response.status}: ${msg}`
+    })
+    .finally(()=>{
+        console.log('Ejecución independiente al resultado de AXIOS')
+
+    });
+
 })();
