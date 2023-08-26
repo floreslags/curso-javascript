@@ -74,4 +74,39 @@
     .finally(()=>{
         console.log('Código de ejecución independiente a la respuesta FETCH')
     });
-})()
+})();
+
+
+(()=>{
+    const $fetch = document.getElementById('fetch-async'),
+    $fragment = document.createDocumentFragment();
+
+    let externo = 'https://jsonplaceholder.typicode.com/users',
+    interno = 'assets/users.json';
+
+    async function getData(){
+        try {
+
+            let res = await fetch(externo),
+            data = await res.json();
+
+            if(!res.ok) throw {status:res.status,statusText:res.statusText}
+
+            data.forEach(el=>{
+                const $li = document.createElement('li');
+                $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`; 
+                $fragment.appendChild($li);
+            });
+    
+            $fetch.appendChild($fragment);
+            
+        } catch (err) {
+            let msg = err.statusText || 'Ocurrió un error';
+            $fetch.innerHTML = `Error ${err.status}: ${msg}`
+        } finally{
+            console.log('Independiente a try catch')
+        }
+    }
+
+    getData();
+})();
