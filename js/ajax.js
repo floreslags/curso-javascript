@@ -1,4 +1,4 @@
-(()=>{
+ajax(()=>{
 
     //Creación de instancias
     const xhr = new XMLHttpRequest(),
@@ -180,4 +180,6 @@
     getData();
 
 })();
+
+
 
