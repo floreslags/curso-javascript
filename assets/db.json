@@ -24,6 +24,46 @@
       "id": 5,
       "name": "Ikki",
       "constellation": "Phoenix"
+    },
+    {
+      "name": "Mu",
+      "constellation": "Aries",
+      "id": 6
+    },
+    {
+      "name": "Aldebaran",
+      "constellation": "Taurus",
+      "id": 7
+    },
+    {
+      "name": "Saga",
+      "constellation": "Gemini",
+      "id": 8
+    },
+    {
+      "name": "Death Mask",
+      "constellation": "Cancer",
+      "id": 9
+    },
+    {
+      "name": "Aioria",
+      "constellation": "Leo",
+      "id": 10
+    },
+    {
+      "name": "Shaka",
+      "constellation": "Virgo",
+      "id": 11
+    },
+    {
+      "name": "Dohko",
+      "constellation": "Libra",
+      "id": 12
+    },
+    {
+      "name": "Milo",
+      "constellation": "Scorpio",
+      "id": 13
     }
   ],
   "gods": [
