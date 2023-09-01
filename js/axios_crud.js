@@ -5,6 +5,8 @@ $title = d.querySelector(".crud-title"),
 $template = d.querySelector("#crud-template").content,
 $fragment = d.createDocumentFragment();
 
+// Comando para json-wervserver: json-server -w -p 5000 assets/db.json 
+
 
 // Load DATA
 const getAll = async ()=>{
