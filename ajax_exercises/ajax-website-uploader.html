@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Uploader</title>
+    <style>
+
+        html{
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+        *,
+        *::before,
+        *::after{
+            box-sizing: inherit;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <input type="file" name="files" id="files" multiple>
+    </main>
+
+    <script>
+
+        const d = document,
+        $main = d.querySelector('main'),
+        $files = d.getElementById('files');
+
+        // File uploader function
+
+        const uploader = (file)=>{
+
+            // Instancia de XHR
+            const xhr = new XMLHttpRequest(),
+            formData = new FormData();
+
+            formData.append('file',file);
+
+            // Eventos de XHR
+            xhr.addEventListener('readystatechange', e =>{
+
+                if(xhr.readyState !== 4) return;
+
+                if(xhr.status >= 200 && xhr.status < 300){
+                    console.log(JSON.parse(xhr.responseText));
+                }else{
+                    let msg = xhr.statusText || 'There was an error';
+                    console.error(`Error ${xhr.status}: ${msg}`)
+                }
+            });
+
+            xhr.open('POST','http://localhost/proyectos/curso-javascript/ajax_exercises/php/uploader.php');
+            xhr.setRequestHeader('enc-type','multipart/form-data');
+            xhr.send(formData);
+
+        }
+
+        d.addEventListener('change', e => {
+         if(e.target === $files) Array.from(e.target.files).forEach(el => uploader(el));   
+        })
+
+
+
+    </script>
+</body>
+</html>
