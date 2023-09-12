@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX - Nested Selects</title>
+</head>
+<body>
+    <h1>AJAX - Nested Selects</h1>
+    <h2>Estados, Municipios y Colonias de Mexico</h2>
+    <label for="primary-select">Estados</label>
+    <select name="primary" id="primary-select">
+        <option value="">Elige un Estado</option>
+    </select>
+    <p></p>
+    <label for="secondary-select">Municipios</label>
+    <select name="secondary" id="secondary-select">
+        <option value="">Elige un Municipio</option>
+    </select>
+    <p></p>
+    <label for="third-select">Colonias</label>
+    <select name="third" id="third-select">
+        <option value="">Elige una Colonia</option>
+    </select>
+    <p></p>
+
+    <script>
+        // Variables del DOM
+        const d = document,
+        $primarySelect = d.getElementById('primary-select'),
+        $secondarySelect = d.getElementById('secondary-select'),
+        $thirdSelect = d.getElementById('third-select');
+
+        // Funciones    
+        function stateLoad(){
+            
+            // let token = 'a1312a34-b211-4c87-87e7-3d3e0c09605a';
+            let token = 'pruebas';
+
+
+            // Consulta de los estados
+            fetch(`https://api.copomex.com/query/get_estados?token=${token}`)
+                .then(res => res.ok ? res.json() : Promise.reject(res))
+                .then(data => {
+                    console.log(data);
+
+                    let $options = `<option value="">Elige un Estado</option>`;
+                    
+                    data.response.estado.forEach(el => $options += `<option value="${el}">${el}</option>`);
+                    $primarySelect.innerHTML = $options;
+
+                })
+                .catch(err => {
+                    console.log(err);
+                    let msg = err.responseText || 'Ocurrio un error';
+                    $primarySelect.nextSibling.innerHTML = `
+                    Error ${err.status}: ${msg}
+                `;
+
+                });
+        }
+
+        function townLoad(state){
+
+            fetch(`https://api.copomex.com/query/get_municipio_por_estado/${state}?token=pruebas`)
+            .then(res => res.ok? res.json():Promise.reject(res))
+            .then(data => {
+                console.log(data)
+
+                let $options = `<option value="">Elige un Municipio</option>`;
+
+                data.response.municipios.forEach(el => $options += `<option value="${el}">${el}</option>`);
+                $secondarySelect.innerHTML = $options;
+            })
+            .catch(err => {
+                console.log(err);
+                let msg = err.responseText || 'Ocurrio un error';
+                $secondarySelect.nextSibling.innerHTML = `
+                    Error ${err.status}: ${msg}
+                `;
+
+            })
+
+        }
+
+        function neighborhoodLoad(town){
+
+            fetch(`https://api.copomex.com/query/get_colonia_por_municipio/${town}?token=pruebas`)
+                .then(res => res.ok ? res.json() : Promise.reject(res))
+                .then(data => {
+                    console.log(data)
+
+                    let $options = `<option value="">Elige una Colonia</option>`;
+
+                    data.response.colonia.forEach(el => $options += `<option value="${el}">${el}</option>`);
+                    $thirdSelect.innerHTML = $options;
+                })
+                .catch(err => {
+                    console.log(err);
+                    let msg = err.responseText || 'Ocurrio un error';
+                    $thirdSelect.nextSibling.innerHTML = `
+                    Error ${err.status}: ${msg}
+                `;
+
+                })
+
+        }
+
+        // Eventos
+
+        d.addEventListener('DOMContentLoaded',stateLoad());
+
+        $primarySelect.addEventListener('change',e => townLoad(e.target.value));
+        $secondarySelect.addEventListener('change',e => neighborhoodLoad(e.target.value));
+        
+
+
+    </script>
+</body>
+</html>
