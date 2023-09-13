@@ -1,23 +1,20 @@
 import api from './helpers/wp_api.js';
 import { ajax } from './helpers/ajax.js';
+import { Title } from './components/titleComponent.js';
+import { Loader } from './components/loaderComponent.js';
 
 export function App(){
-    document.getElementById('root').innerHTML = `<h1>Bienvenidos a mi primer SPA con Vanilla JS</h1>`;
 
-    ajax({
-        url:api.POSTS,
-        success:(posts)=>{
-            console.log(posts)
-        }
-    });
+    // Variables del DOM
+    const d = document,
+    $root = d.getElementById('root');
 
-    ajax({
-        url:api.CATEGORIES,
-        success:(categories)=>{
-            console.log(categories)
-        }
-    });
+    // Carga de componentes
+    $root.appendChild(Title());
+    $root.appendChild(Loader())
 
 
-    console.log(api);
+
+
+
 }
