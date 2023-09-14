@@ -1,6 +1,7 @@
 import { App } from "./App.js";
 
+// Eventos del DOM
+document.addEventListener('DOMContentLoaded',App);
 
-const d = document;
-
-d.addEventListener('DOMContentLoaded',App);
+// Eventos de WINDOW
+window.addEventListener('hashchange',App);
