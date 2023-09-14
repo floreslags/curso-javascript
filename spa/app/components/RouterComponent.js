@@ -1,6 +1,7 @@
 import api from '../helpers/wp_api.js';
 import {ajax} from '../helpers/ajax.js';
 import { postCard } from './PostCardComponent.js';
+import { Post } from './PostComponent.js';
 
 export async function Router(){
 
@@ -20,6 +21,8 @@ export async function Router(){
             success:(posts)=>{
                 // console.log(posts);
                 let html = '';
+
+                // carga dinámica de $PostCards por cada post de la API
     
                 posts.forEach(post => html+= postCard(post));
                 $main.innerHTML = html;
@@ -32,7 +35,16 @@ export async function Router(){
         $main.innerHTML = `<h2>Sección Contacto</h2>`
         
     }else{
-        $main.innerHTML = `<h2>Carga del post seleccionado</h2>`
+        await ajax({
+            url:`${api.POST}/${localStorage['wpPostId']}`,
+            success:(post)=>{
+                
+                // console.log(post);
+
+                // Carga del componente $post
+                $main.innerHTML = Post(post);
+            }
+        });
     }
 
     d.querySelector('.loader').style.display = 'none';
