@@ -1,16 +1,17 @@
-import { Loader } from './components/loaderComponent.js';
-import { Header } from './components/headerComponent.js';
-import { Posts } from './components/postsComponent.js';
-import { Router } from './components/router.js';
+import { Loader } from './components/LoaderComponent.js';
+import { Header } from './components/HeaderComponent.js';
+import { Main } from './components/MainComponent.js';
+import { Router } from './components/RouterComponent.js';
 
 export function App(){
 
     // Variables del DOM
     const $root = document.getElementById('root');
+    $root.innerHTML = null; // Carga vacía del contenido en el elemento $root del documento
 
     // Carga de componentes
     $root.appendChild(Header());
-    $root.appendChild(Posts());
+    $root.appendChild(Main());
     $root.appendChild(Loader());
 
     // Invocación del router
