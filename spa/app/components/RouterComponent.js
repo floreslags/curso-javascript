@@ -16,6 +16,7 @@ export async function Router(){
 
     // Validaciones del Router
     if(!hash || hash === '#/'){
+        // Carga de todos los POSTS
         await ajax({
             url:api.POSTS,
             success:(posts)=>{
@@ -30,15 +31,33 @@ export async function Router(){
         });
         
     }else if(hash.includes('#/search')){
-        $main.innerHTML = `<h2>Sección Búsqueda</h2>`
+        // Carga de los POSTS de busqueda
+
+        let query = localStorage['wpSearch'];
+        if(!query) return false;
+
+        await ajax({
+            url:`${api.SEARCH}${query}`,
+            success:(search)=>{
+                console.log(search);
+            }
+        });
+
+
+
+
     }else if(hash === '#/contact'){
+        // Carga del FORMULARIO de contacto
+
         $main.innerHTML = `<h2>Sección Contacto</h2>`
         
     }else{
+
+        // Carga de un solo POST
         await ajax({
             url:`${api.POST}/${localStorage['wpPostId']}`,
             success:(post)=>{
-                
+
                 // console.log(post);
 
                 // Carga del componente $post
