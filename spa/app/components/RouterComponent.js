@@ -2,6 +2,7 @@ import api from '../helpers/wp_api.js';
 import {ajax} from '../helpers/ajax.js';
 import { postCard } from './PostCardComponent.js';
 import { Post } from './PostComponent.js';
+import { SearchPostCard } from './SearchPostCardComponent.js';
 
 export async function Router(){
 
@@ -34,12 +35,26 @@ export async function Router(){
         // Carga de los POSTS de busqueda
 
         let query = localStorage['wpSearch'];
-        if(!query) return false;
+        if(!query){
+            d.querySelector('.loader').style.display = 'none';
+            return false;
+        } 
 
         await ajax({
             url:`${api.SEARCH}${query}`,
             success:(search)=>{
                 console.log(search);
+
+                let html = '';
+
+                if(search.length === 0){
+                    html = `<p class="error">Error, no se encontraron resultados de la búsqueda <mark>${query}</mark></p>`;
+                }else{
+                    // Carga de $SearchPostCards
+                    search.forEach(post => html +=SearchPostCard(post));
+                }
+
+                $main.innerHTML = html;
             }
         });
 

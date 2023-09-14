@@ -33,6 +33,8 @@ img{
     height: auto;
 }
 
+/* Estilos del Leader */
+
 .loader{
     display: block;
     margin: 1rem auto;
@@ -49,6 +51,14 @@ img{
     background-color: #dc3545;
 }
 
+.error mark{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    color: #fff;
+    background-color: #01579b;
+}
+
 .form-search{
     margin: auto;
     text-align: center;
@@ -62,6 +72,7 @@ img{
     font-size: 1rem;
 }
 
+/* Estilos del header */
 .header{
     padding: 0.5rem;
     position: sticky;
@@ -73,6 +84,8 @@ img{
 .header >*{
     margin: 1rem auto;
 }
+
+/* Estilos del componente PostCard */
 
 .post-card{
     margin: 1rem auto;
@@ -86,6 +99,7 @@ img{
     justify-content: space-between;
 }
 
+/* Estilos del Componente Main */
 .grid-fluid{
     margin: 1rem auto;
     max-width: 90%;
