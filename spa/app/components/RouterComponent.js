@@ -43,7 +43,7 @@ export async function Router(){
         await ajax({
             url:`${api.SEARCH}${query}`,
             success:(search)=>{
-                console.log(search);
+                // console.log(search);
 
                 let html = '';
 

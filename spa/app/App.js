@@ -2,6 +2,7 @@ import { Loader } from './components/LoaderComponent.js';
 import { Header } from './components/HeaderComponent.js';
 import { Main } from './components/MainComponent.js';
 import { Router } from './components/RouterComponent.js';
+import { infiniteScroll } from './helpers/infitite_scroll.js';
 
 export function App(){
 
@@ -16,4 +17,7 @@ export function App(){
 
     // Invocación del router
     Router();
+
+    // Invocación del Scroll Infinito
+    infiniteScroll();
 }

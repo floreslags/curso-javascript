@@ -2,12 +2,14 @@ const NAME = 'malvestida',
 DOMAIN = `https://${NAME}.com`,
 SITE = `${DOMAIN}/wp-json`,
 WP_API = `${SITE}/wp/v2`,
-POSTS = `${WP_API}/posts?_embed`,
+PER_PAGE = 6,
+POSTS = `${WP_API}/posts?_embed&per_page=${PER_PAGE}`,
 POST = `${WP_API}/posts`,
-SEARCH = `${WP_API}/search?_embed&search=`,
-PAGES = `${WP_API}/pages`,
-CATEGORIES = `${WP_API}/categories`
+SEARCH = `${WP_API}/search?_embed&per_page=${PER_PAGE}&search=`,
+PAGES = `${WP_API}/pages`
 ;
+
+let page = 1;
 
 export default {
     NAME,
@@ -17,6 +19,6 @@ export default {
     POSTS,
     POST,
     SEARCH,
-    CATEGORIES,
-    PAGES
+    PAGES,
+    page
 }
