@@ -3,6 +3,7 @@ import {ajax} from '../helpers/ajax.js';
 import { postCard } from './PostCardComponent.js';
 import { Post } from './PostComponent.js';
 import { SearchPostCard } from './SearchPostCardComponent.js';
+import { ContactFormComponent } from './ContactFormComponent.js';
 
 export async function Router(){
 
@@ -63,8 +64,7 @@ export async function Router(){
 
     }else if(hash === '#/contact'){
         // Carga del FORMULARIO de contacto
-
-        $main.innerHTML = `<h2>Sección Contacto</h2>`
+        $main.appendChild(ContactFormComponent());
         
     }else{
 
