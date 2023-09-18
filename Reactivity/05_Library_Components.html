@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Reactivity Library Components</title>
+</head>
+<body>
+    <h1>JS Reactivity Library Components</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-item" placeholder="Tarea por hacer">
+        <input type="submit" value="Agregar">
+        <h2>Lista de tareas</h2>
+        <ul id="todo-list"></ul>
+    </form>
+    <script src="./Component.js"></script>
+    <script>
+
+        // Variables del DOM
+        const d = document;
+
+        // Se crea una instancia de App y se definen sus atributos
+
+        const App = new Component({
+            el:'#todo-list',
+            data:{
+                todoList:[]
+            },
+            template:function(props){
+                
+                if(props.todoList.length < 1){
+                    return`<p><em>Lista sin tareas por hacer.</em></p>`;
+                } 
+                
+                let todos = props.todoList.map(item => `<li>${item}</li>`).join('');
+                
+                return todos;
+            }
+        });
+
+
+        // Eventos del DOM
+
+        d.addEventListener('DOMContentLoaded',App.render);
+        
+        // State Default Values
+        App.setState({
+            todoList:['to-do 1','to-do 2', 'to-do 3']
+        });
+
+        d.addEventListener('submit',e =>{
+            if(!e.target.matches('#todo-form')) return false;
+            e.preventDefault();
+
+            const $item = d.getElementById('todo-item');
+
+            if(!$item) return;
+
+            // State Update
+            // state.todoList.push($item.value);
+    
+            // Reactive State Update
+            const data = App.getState();
+            data.todoList.push($item.value);
+            App.setState({todoList:data.todoList});
+
+            // Limpiar input
+            $item.value  = '';
+            $item.focus();
+
+            //
+        });
+    </script>
+
+
+</body>
+</html>
