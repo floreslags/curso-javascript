@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Reactivity State Components</title>
+</head>
+<body>
+    <h1>JS Reactivity State Components</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-item" placeholder="Tarea por hacer">
+        <input type="submit" value="Agregar">
+        <h2>Lista de tareas</h2>
+        <ul id="todo-list"></ul>
+    </form>
+    
+    <script>
+
+        // Variables del DOM
+        const d = document;
+
+        // GLOBAL STATE
+        const state = {
+            todoList:[]
+        }
+
+        // UI Template
+
+        const template = ()=>{
+            if(template.data.todoList.length < 1){
+                return `<p><em>Lista sin tareas por hacer.</em></p>`
+            }
+
+            let todos = template.data.todoList.map(item => `<li>${item}</li>`).join('');
+            return todos;
+        }
+
+        // Para los UI Components, se declara un LOCAL STATE de referencia sobre el elemento TEMPLATE
+
+        // LOCAL STATE
+        template.data = {
+            todoList:[]
+        }
+
+
+        // UI Render
+        const render = ()=>{
+            console.log('Global State',state);
+            console.log('Local State',template.data);
+            const $list = d.getElementById('todo-list');
+            if(!$list) return;
+
+            $list.innerHTML = template();
+        }
+
+
+        // Reactive State Update
+        const setState = obj=>{
+            for(let key in obj){
+                if(template.data.hasOwnProperty(key)){
+                    template.data[key] = obj[key];
+                }
+            }
+            render();
+        }
+
+        // Transform a Mutable State Object into a Inmutable State
+        const getState = ()=> JSON.parse(JSON.stringify(template.data));
+
+        // Eventos del DOM
+
+        d.addEventListener('DOMContentLoaded',render);
+        
+        // State Default Values
+        setState({
+            todoList:['to-do 1','to-do 2', 'to-do 3']
+        })
+
+        // Estado mutable
+        // const items = state.todoList;
+        // items.push('to-do 4');
+        // console.log('Mutable State',state);
+
+        // Estado inmutable
+        const items = getState();
+        items.todoList.push('to-do 4');
+        console.log('Estado Inmutable',template.data);
+
+        d.addEventListener('submit',e =>{
+            if(!e.target.matches('#todo-form')) return false;
+            e.preventDefault();
+
+            const $item = d.getElementById('todo-item');
+
+            if(!$item) return;
+
+            // State Update
+            // state.todoList.push($item.value);
+    
+            // Reactive State Update
+            const data = getState();
+            data.todoList.push($item.value);
+            setState({todoList:data.todoList});
+
+            // Limpiar input
+            $item.value  = '';
+            $item.focus();
+
+            //
+        });
+    </script>
+</body>
+</html>
