@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Reactivity State Based UI</title>
+</head>
+<body>
+    <h1>JS Reactivity State Based UI</h1>
+    <form id="todo-form">
+        <input type="text" id="todo-item" placeholder="Tarea por hacer">
+        <input type="submit" value="Agregar">
+        <h2>Lista de tareas</h2>
+        <ul id="todo-list"></ul>
+    </form>
+    
+    <script>
+
+        // Variables del DOM
+        const d = document;
+
+        // Variable de reactividad y manipulacion de estados
+        const state = {
+            todolist:[]
+        }
+
+        // UI Template
+
+        const template = ()=>{
+            if(state.todolist.length < 1){
+                return `<p><em>Lista sin tareas por hacer.</em></p>`
+            }
+
+            let todos = state.todolist.map(item => `<li>${item}</li>`).join('');
+            return todos;
+        }
+
+
+        // UI Render
+        const render = ()=>{
+            console.log(state);
+            const $list = d.getElementById('todo-list');
+            if(!$list) return;
+
+            $list.innerHTML = template();
+        }
+
+
+        // Eventos del DOM
+
+        d.addEventListener('DOMContentLoaded',render);
+
+        d.addEventListener('submit',e =>{
+            if(!e.target.matches('#todo-form')) return false;
+            e.preventDefault();
+
+            const $item = d.getElementById('todo-item');
+
+            if(!$item) return;
+
+            // State Update
+            state.todolist.push($item.value);
+            render();
+
+            // Limpiar input
+            $item.value  = '';
+            $item.focus();
+
+            //
+        });
+    </script>
+</body>
+</html>
